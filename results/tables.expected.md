@@ -258,3 +258,43 @@ results/lme-qa-sessions-11663.jsonl (n=100)
 | multi-session | 36 | 0.167 |
 | single-session-user | 64 | 0.797 |
 | all | 100 | 0.570 |
+
+results/locomo-qa-oracle-top10-11672.jsonl (n=1540)
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.759 |
+| category-2 | 321 | 0.533 |
+| category-3 | 96 | 0.490 |
+| category-4 | 841 | 0.854 |
+| all | 1540 | 0.747 |
+
+results/locomo-qa-turns-fused-top20-11672.jsonl (n=1540)
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.525 |
+| category-2 | 321 | 0.396 |
+| category-3 | 96 | 0.406 |
+| category-4 | 841 | 0.793 |
+| all | 1540 | 0.637 |
+
+results/locomo-qa-turns-fused-top10-11672.jsonl (n=1540)
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.422 |
+| category-2 | 321 | 0.352 |
+| category-3 | 96 | 0.365 |
+| category-4 | 841 | 0.738 |
+| all | 1540 | 0.577 |
+
+results/locomo-qa-turns-top10-11672.jsonl (n=1540)
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.312 |
+| category-2 | 321 | 0.321 |
+| category-3 | 96 | 0.344 |
+| category-4 | 841 | 0.627 |
+| all | 1540 | 0.488 |

@@ -1,0 +1,53 @@
+{"status":"ok"}=== arm: oracle top 10
+1400 questions
+1500 questions
+
+LoCoMo answer accuracy, arm 'oracle' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.759 |
+| category-2 | 321 | 0.533 |
+| category-3 | 96 | 0.490 |
+| category-4 | 841 | 0.854 |
+| all | 1540 | 0.747 |
+=== arm: turns fused top 10
+1400 questions
+1500 questions
+
+LoCoMo answer accuracy, arm 'turns fused' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.422 |
+| category-2 | 321 | 0.352 |
+| category-3 | 96 | 0.365 |
+| category-4 | 841 | 0.738 |
+| all | 1540 | 0.577 |
+=== arm: turns fused top 20
+1400 questions
+1500 questions
+
+LoCoMo answer accuracy, arm 'turns fused' top 20, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.525 |
+| category-2 | 321 | 0.396 |
+| category-3 | 96 | 0.406 |
+| category-4 | 841 | 0.793 |
+| all | 1540 | 0.637 |
+=== arm: turns top 10
+1400 questions
+1500 questions
+
+LoCoMo answer accuracy, arm 'turns' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.312 |
+| category-2 | 321 | 0.321 |
+| category-3 | 96 | 0.344 |
+| category-4 | 841 | 0.627 |
+| all | 1540 | 0.488 |
+ONE-DONE

@@ -19,6 +19,9 @@ case "${1:-tables}" in
     python3 scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category
     python3 scripts/tables.py --verdicts results/lme-qa-oracle-11663.jsonl \
       --verdicts results/lme-qa-sessions-fused-11663.jsonl --verdicts results/lme-qa-sessions-11663.jsonl
+    python3 scripts/tables.py --verdicts results/locomo-qa-oracle-top10-11672.jsonl \
+      --verdicts results/locomo-qa-turns-fused-top20-11672.jsonl \
+      --verdicts results/locomo-qa-turns-fused-top10-11672.jsonl --verdicts results/locomo-qa-turns-top10-11672.jsonl
     ;;
   data)
     mkdir -p "$HOME/data" "$HOME/models"
