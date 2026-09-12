@@ -23,7 +23,10 @@ the files a reader needs to regenerate every table without a model call.
 $ ./repro.sh tables
 #+end_src
 
-No model, no network. Retrieval tables are counts over the dumps
+No model, no network. The committed copy is =results/tables.expected.md=
+and the repository's check regenerates and diffs it on every push, so a
+table that stops matching its inputs fails a build. Retrieval tables are
+counts over the dumps
 (hit@k: any gold id in the top k; recall@k: the share of gold ids in the
 top k). Accuracy tables are counts over the verdicts. The numbers in the
 packset documentation are these.

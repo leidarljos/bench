@@ -1,0 +1,13 @@
+name: tables regenerate
+on:
+  push:
+  pull_request:
+jobs:
+  tables:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate every table from the dumps and verdicts and diff against the committed copy
+        run: |
+          ./repro.sh tables > /tmp/tables.md
+          diff -u results/tables.expected.md /tmp/tables.md
