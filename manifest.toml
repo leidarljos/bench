@@ -86,3 +86,11 @@ file = "results/locomo-dump.jsonl"
 job = "jobs/locomo-dump.sbatch"
 questions = 1986
 regenerate = "python3 scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category"
+
+[results.lme_dump_all_window]
+file = "results/lme-dump-all-window.jsonl"
+job = "jobs/lme-dump-all.sbatch"
+questions = 470
+arms = ["sessions", "sessions dense", "sessions fused", "sessions fused recency", "sessions fused window", "turns", "windows"]
+packset_commit = "the window arm commit after v0.6.0 (feat(bench): a window arm)"
+regenerate = "python3 scripts/tables.py results/lme-dump-all-window.jsonl"
