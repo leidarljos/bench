@@ -1,0 +1,23 @@
+50 questions, 14s
+100 questions, 22s
+150 questions, 29s
+200 questions, 36s
+250 questions, 43s
+300 questions, 50s
+350 questions, 57s
+400 questions, 63s
+450 questions, 71s
+| arm | asked | hit@1 | recall@1 | hit@5 | recall@5 | hit@10 | recall@10 |
+|---|---|---|---|---|---|---|---|
+| turns | 127 | 0.787 | 0.406 | 0.929 | 0.864 | 0.945 | 0.912 |
+| windows | 127 | 0.772 | 0.401 | 0.913 | 0.841 | 0.953 | 0.912 |
+| sessions | 127 | 0.795 | 0.417 | 0.937 | 0.866 | 0.961 | 0.908 |
+| sessions dense | 127 | 0.740 | 0.369 | 0.929 | 0.832 | 0.961 | 0.908 |
+| sessions fused | 127 | 0.811 | 0.417 | 0.953 | 0.899 | 0.976 | 0.955 |
+| sessions fused recency | 127 | 0.850 | 0.442 | 0.969 | 0.772 | 0.976 | 0.843 |
+| sessions fused window | 127 | 0.835 | 0.429 | 0.945 | 0.878 | 0.976 | 0.942 |
+| sessions fused island | 127 | 0.425 | 0.198 | 0.961 | 0.861 | 0.976 | 0.955 |
+
+470 questions in 74.8s
+470 ~/lme-dump-island.jsonl
+ONE-DONE

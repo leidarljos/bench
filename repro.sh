@@ -15,6 +15,7 @@ case "${1:-tables}" in
     cd "$here"
     python3 scripts/tables.py results/lme-dump-all.jsonl
     python3 scripts/tables.py results/lme-dump-all-window.jsonl
+    python3 scripts/tables.py results/lme-dump-island.jsonl
     python3 scripts/tables.py results/lme-dump-100-rerank.jsonl
     python3 scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category
     python3 scripts/tables.py --verdicts results/lme-qa-oracle-11663.jsonl \

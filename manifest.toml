@@ -103,3 +103,12 @@ questions = 1540
 categories = "1 multi-hop, 2 temporal, 3 open-domain, 4 single-hop; 5 (adversarial) left out"
 prompt = "the LongMemEval reading prompt over dated turns, each marked with its distance from the question"
 regenerate = "python3 scripts/tables.py --verdicts results/locomo-qa-oracle-top10-11672.jsonl --verdicts results/locomo-qa-turns-fused-top20-11672.jsonl --verdicts results/locomo-qa-turns-fused-top10-11672.jsonl --verdicts results/locomo-qa-turns-top10-11672.jsonl"
+
+[results.lme_dump_island]
+file = "results/lme-dump-island.jsonl"
+log = "results/lme-island-11737.txt"
+job = "jobs/lme-dump-island.sbatch"
+questions = 470
+arms = ["sessions", "sessions dense", "sessions fused", "sessions fused recency", "sessions fused window", "sessions fused island", "turns", "windows"]
+packset_commit = "the island arm commit after v0.7.2 (feat(bench): an island arm on LongMemEval)"
+regenerate = "python3 scripts/tables.py results/lme-dump-island.jsonl"
