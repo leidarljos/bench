@@ -1,0 +1,40 @@
+{"status":"ok"}=== arm: oracle
+25 questions
+50 questions
+75 questions
+100 questions
+
+LongMemEval_S answer accuracy, arm 'oracle' top 5, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| multi-session | 36 | 0.250 |
+| single-session-user | 64 | 0.938 |
+| all | 100 | 0.690 |
+=== arm: sessions fused
+25 questions
+50 questions
+75 questions
+100 questions
+
+LongMemEval_S answer accuracy, arm 'sessions fused' top 5, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| multi-session | 36 | 0.194 |
+| single-session-user | 64 | 0.875 |
+| all | 100 | 0.630 |
+=== arm: sessions
+25 questions
+50 questions
+75 questions
+100 questions
+
+LongMemEval_S answer accuracy, arm 'sessions' top 5, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| multi-session | 36 | 0.167 |
+| single-session-user | 64 | 0.797 |
+| all | 100 | 0.570 |
+ONE-DONE

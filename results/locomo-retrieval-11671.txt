@@ -1,0 +1,20 @@
+encoder: present, lexical and fused arms
+conversation 1 of 10, 37s
+conversation 2 of 10, 62s
+conversation 3 of 10, 101s
+conversation 4 of 10, 140s
+conversation 5 of 10, 186s
+conversation 6 of 10, 231s
+conversation 7 of 10, 274s
+conversation 8 of 10, 318s
+conversation 9 of 10, 350s
+conversation 10 of 10, 387s
+
+LoCoMo, turn granularity, evidence hit
+
+| arm | asked | hit@1 | hit@5 | hit@10 |
+|---|---|---|---|---|
+| turns bm25+ | 1986 | 0.318 | 0.566 | 0.647 |
+| turns fused | 1986 | 0.414 | 0.680 | 0.759 |
+1986 ~/locomo-dump.jsonl
+ONE-DONE

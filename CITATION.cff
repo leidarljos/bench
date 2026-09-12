@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "leidarljos bench: reproducibility package for the seat's memory and consensus measurements"
+message: "Cite the package and the benchmarks it measures on."
+type: dataset
+authors:
+  - name: "leidarljos"
+date-released: 2026-09-12
+license: MIT
+repository-code: "https://github.com/leidarljos/bench"
+references:
+  - type: article
+    title: "LongMemEval"
+    doi: 10.48550/arXiv.2410.10813
+  - type: article
+    title: "LoCoMo"
+    doi: 10.48550/arXiv.2402.17753

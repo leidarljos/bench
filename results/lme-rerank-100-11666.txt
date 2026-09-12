@@ -1,0 +1,16 @@
+50 questions, 769s
+100 questions, 1594s
+single-session-user
+
+| arm | asked | hit@1 | recall@1 | hit@5 | recall@5 | hit@10 | recall@10 |
+|---|---|---|---|---|---|---|---|
+| turns | 64 | 0.953 | 0.953 | 0.984 | 0.984 | 1.000 | 1.000 |
+| windows | 64 | 0.906 | 0.906 | 0.984 | 0.984 | 1.000 | 1.000 |
+| sessions | 64 | 0.922 | 0.922 | 0.969 | 0.969 | 1.000 | 1.000 |
+| sessions dense | 64 | 0.469 | 0.469 | 0.703 | 0.703 | 0.828 | 0.828 |
+| sessions fused | 64 | 0.906 | 0.906 | 1.000 | 1.000 | 1.000 | 1.000 |
+| sessions fused rerank | 64 | 0.734 | 0.734 | 0.938 | 0.938 | 0.953 | 0.953 |
+
+100 questions in 1593.9s
+100 ~/lme-dump-100-rerank.jsonl
+ONE-DONE

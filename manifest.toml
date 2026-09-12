@@ -1,0 +1,88 @@
+# What every number in this package was made from. Hashes are sha256.
+
+[package]
+name = "leidarljos-bench"
+date = "2026-09-12"
+description = "Reproducibility package for the seat's memory and consensus measurements"
+tables = "python3 scripts/tables.py ..."   # every table regenerates from results/ with no model call
+
+[datasets.longmemeval_s]
+url = "https://huggingface.co/datasets/xiaowu0162/longmemeval/resolve/main/longmemeval_s"
+file = "longmemeval_s.json"
+sha256 = "08d8dad4be43ee2049a22ff5674eb86725d0ce5ff434cde2627e5e8e7e117894"
+bytes = 278025796
+questions = 500
+answerable = 470            # `_abs` questions carry no answer session and are left out
+doi = "10.48550/arXiv.2410.10813"
+
+[datasets.locomo10]
+url = "https://github.com/snap-research/locomo"
+file = "locomo10.json"
+sha256 = "79fa87e90f04081343b8c8debecb80a9a6842b76a7aa537dc9fdf651ea698ff4"
+conversations = 10
+questions = 1986
+doi = "10.48550/arXiv.2402.17753"
+
+[models.encoder]
+name = "multilingual-e5-large"                      # PACKSET_EMBED_MODEL=e5-large-v2 resolves to this
+provider = "fastembed 6, model MultilingualE5Large (Qdrant/multilingual-e5-large-onnx)"
+role = "query and document vectors for the dense ballot"
+hardware = "CPU, 12 to 16 threads"
+
+[models.reranker]
+name = "bge-reranker-base"
+provider = "fastembed 6, RerankerModel::BGERerankerBase"
+role = "the cross-encoder arm, a measured negative"
+
+[models.reader]
+name = "Qwen2.5-7B-Instruct-Q5_K_M.gguf"
+url = "https://huggingface.co/bartowski/Qwen2.5-7B-Instruct-GGUF/resolve/main/Qwen2.5-7B-Instruct-Q5_K_M.gguf"
+sha256 = "2e998d7e181c8756c5ffc55231b9ee1cdc9d3acec4245d6e27d32bd8e738c474"
+bytes = 5444831936
+role = "reader and judge for every answer-accuracy row"
+server = "llama.cpp llama-server, commit 3057bb66c86c46d5781e50e85462a760ba7d1feb, built with CUDA 13.3 for sm_120"
+flags = "-c 65536 -np 2 -ngl 99 -fa on, temperature 0, reader max_tokens 512, judge max_tokens 8"
+hardware = "one NVIDIA GeForce RTX 5070, 12 GB"
+
+[software]
+packset_repository = "https://github.com/leidarljos/packset"
+packset_harness = "crates/packset-daemon/examples/longmemeval.rs, examples/locomo_dump.rs, scripts/longmemeval_qa.py"
+packset_commit_retrieval_full = "045b3d3"          # the 470-question retrieval run and the 100-question dumps
+packset_commit_rerank = "cbf8b41"                  # the rerank arm
+packset_commit_recency_and_dump_all = "df9a537"    # the recency arm and the 470-question dump
+packset_commit_locomo = "db12aa6"                  # the LoCoMo dump and QA mode
+rust = "1.98.0 (88d9e12ae 2026-08-18)"
+scheduler = "Slurm on one node: 32 cores, 46 GB, one RTX 5070"
+prompts = "LongMemEval's reading prompt and type-specific judge prompts, reproduced in scripts/longmemeval_qa.py of packset from the benchmark's evaluation code; LoCoMo uses the same base judge prompt and a short reading prompt, category 5 left out"
+
+[results.lme_retrieval_full]
+file = "results/lme-full-retrieval-11653.txt"
+job = "jobs/lme-full.sbatch"
+questions = 470
+arms = ["turns", "windows", "sessions", "sessions dense", "sessions fused"]
+
+[results.lme_dump_all]
+file = "results/lme-dump-all.jsonl"
+job = "jobs/lme-dump-all.sbatch"
+questions = 470
+arms = ["sessions", "sessions dense", "sessions fused", "sessions fused recency", "turns", "windows"]
+regenerate = "python3 scripts/tables.py results/lme-dump-all.jsonl"
+
+[results.lme_dump_100_rerank]
+file = "results/lme-dump-100-rerank.jsonl"
+job = "jobs/lme-rerank.sbatch"
+questions = 100
+regenerate = "python3 scripts/tables.py results/lme-dump-100-rerank.jsonl"
+
+[results.lme_qa_100]
+files = ["results/lme-qa-oracle-11663.jsonl", "results/lme-qa-sessions-fused-11663.jsonl", "results/lme-qa-sessions-11663.jsonl"]
+job = "jobs/lme-qa.sbatch"
+questions = 100
+top = 5
+regenerate = "python3 scripts/tables.py --verdicts results/lme-qa-oracle-11663.jsonl --verdicts results/lme-qa-sessions-fused-11663.jsonl --verdicts results/lme-qa-sessions-11663.jsonl"
+
+[results.locomo_dump]
+file = "results/locomo-dump.jsonl"
+job = "jobs/locomo-dump.sbatch"
+questions = 1986
+regenerate = "python3 scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category"

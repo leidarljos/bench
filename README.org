@@ -1,0 +1,70 @@
+#+title: bench
+#+options: toc:nil num:nil
+
+The reproducibility package for the seat's memory and consensus
+measurements: what was measured, on what, with which code and model, and
+the files a reader needs to regenerate every table without a model call.
+
+* What is here
+
+| path | holds |
+|---+---|
+| =manifest.toml= | every input by hash: datasets, models, code commits, hardware, prompts |
+| =jobs/*.sbatch= | the Slurm scripts that produced each result, as run |
+| =results/*-dump*.jsonl= | one line a question: the gold ids and the ids each retrieval arm ranked |
+| =results/lme-qa-*.jsonl= | one line a question: the judge's verdict and the reader's answer |
+| =results/*.txt= | the job logs with the tables as printed |
+| =scripts/tables.py= | regenerates every retrieval and accuracy table from the dumps and verdicts |
+| =repro.sh= | =tables= recomputes the tables; =data= fetches and checks the inputs; =jobs= resubmits the chain |
+
+* Regenerate the tables
+
+#+begin_src console
+$ ./repro.sh tables
+#+end_src
+
+No model, no network. Retrieval tables are counts over the dumps
+(hit@k: any gold id in the top k; recall@k: the share of gold ids in the
+top k). Accuracy tables are counts over the verdicts. The numbers in the
+packset documentation are these.
+
+* Reproduce the measurements
+
+Three levels, in the sense of the ACM artifact badges.
+
+- *Available*: this repository, and a Zenodo record of each tagged
+  version once the GitHub integration is switched on for it (a step for a
+  person with the organisation's Zenodo account; =.zenodo.json= carries
+  the metadata).
+- *Evaluated*: =./repro.sh tables= regenerates every table from the files
+  here, deterministically.
+- *Reproduced*: =./repro.sh data= fetches the inputs and checks their
+  hashes; =./repro.sh jobs= resubmits the chain on a Slurm node with one
+  GPU, building packset at the commits =manifest.toml= names. Retrieval
+  is deterministic given the encoder model and its version; the reader
+  runs at temperature zero, but a different GPU or llama.cpp commit can
+  change a token, so accuracy rows reproduce to within a question or two.
+
+* The measurements
+
+- LongMemEval_S, 470 answerable questions, session granularity: lexical
+  (BM25+) over turns, windows and sessions; dense (multilingual-e5-large)
+  and fused (CombMNZ) over sessions; a recency arm and a cross-encoder arm
+  as measured negatives. =results/lme-dump-all.jsonl=,
+  =results/lme-dump-100-rerank.jsonl=.
+- LongMemEval_S answer accuracy, first hundred questions, top five
+  sessions to a 7B reader with the benchmark's own prompts: oracle, fused,
+  lexical. =results/lme-qa-*-11663.jsonl=. The 470-question run with a
+  top-ten arm and the LoCoMo run are added when they land.
+- LoCoMo, 1986 questions, turn granularity, evidence hit: lexical and
+  fused. =results/locomo-dump.jsonl=.
+
+* What the numbers are not
+
+Published rows for Mem0 and Zep on these benchmarks are answer accuracy
+with frontier readers over extracted transcript memories; the rows here
+use a 7B reader over sessions the pack retrieved, so the absolute numbers
+do not compare across papers. Within this package, the oracle arm is the
+ceiling any retriever is measured against, and the arms compare under one
+reader. The explanation page of the packset documentation says the same
+at length: https://leidarljos.github.io/packset/.
