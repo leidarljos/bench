@@ -15,6 +15,18 @@ questions = 500
 answerable = 470            # `_abs` questions carry no answer session and are left out
 doi = "10.48550/arXiv.2410.10813"
 
+[datasets.memoryagentbench]
+url = "https://huggingface.co/datasets/ai-hyz/MemoryAgentBench"
+paper = "10.48550/arXiv.2507.05257"
+files = "Accurate_Retrieval.parquet, Conflict_Resolution.parquet, Test_Time_Learning.parquet, Long_Range_Understanding.parquet (the parquet export of the default config)"
+sha256_accurate_retrieval = "56c3cd80fb6731a3e53cd1a6be3148f54df60ff2d290ee50e28f8acebf9655c1"
+sha256_conflict_resolution = "24d5c3f09ce0ce15625cb9f8a98f44f0d864ca6c94d7b4ad04eb697ca3a5ff45"
+sha256_test_time_learning = "5338753be48f925d03318eed66117286e3489025fabe050a547bd086cd7d79c0"
+sha256_long_range_understanding = "5ab175461954db67770d4a4cb69e569b513ebb96aceb9ee79b57f67488bcd539"
+fetch = "jobs/mab-get.sbatch (parquet to JSONL with pyarrow in a venv)"
+harness = "crates/packset-daemon/examples/memoryagentbench.rs; scripts/longmemeval_qa.py --bench mab"
+chunking = "384 words a chunk (the benchmark's 512 model tokens); fact lists one fact a document"
+
 [datasets.locomo10]
 url = "https://github.com/snap-research/locomo"
 file = "locomo10.json"
