@@ -22,7 +22,7 @@ cd "$HOME/Git/Github/packset"
 for spec in "fused live 10" "fused latest 10" "fused 10" "lexical 10" "fused 5"; do
   set -- $spec; top="${!#}"; arm="${spec% *}"
   echo "=== arm: $arm top $top"
-  python3 scripts/longmemeval_qa.py - "$DUMP" --bench mab --chunks "$HOME/mab-chunks" --arm "$arm" --top "$top" --workers 2 \
+  python3 scripts/longmemeval_qa.py "$HOME/data/mab" "$DUMP" --bench mab --chunks "$HOME/mab-chunks" --arm "$arm" --top "$top" --workers 2 \
     --out "$HOME/mab-qa-$(echo "$arm" | tr ' ' '-')-top$top-$SLURM_JOB_ID.jsonl" 2>&1 | tail -30
 done
 kill $SERVER
