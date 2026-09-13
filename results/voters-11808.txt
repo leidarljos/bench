@@ -1,0 +1,52 @@
+FMT-CLEAN
+warning: ljos-consensus@0.4.1: SELDON_SRC=~/Git/Github/seldon has no src/capi.cpp; discrete settle only
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.47s
+=== 9 400 20
+9 voters, accuracies uniform in [0.35, 0.95], 400 two-way questions, 20 seeds (8000 decisions)
+
+| rule | group accuracy |
+|---|---|
+| majority | 0.820 |
+| oracle log-odds | 0.939 |
+| calibrate linear | 0.873 |
+| calibrate log-odds | 0.934 |
+| learn hedge | 0.831 |
+| learn hedge, share 0.1 | 0.877 |
+| learn log-odds online | 0.929 |
+=== 5 400 20
+5 voters, accuracies uniform in [0.35, 0.95], 400 two-way questions, 20 seeds (8000 decisions)
+
+| rule | group accuracy |
+|---|---|
+| majority | 0.751 |
+| oracle log-odds | 0.871 |
+| calibrate linear | 0.781 |
+| calibrate log-odds | 0.858 |
+| learn hedge | 0.761 |
+| learn hedge, share 0.1 | 0.797 |
+| learn log-odds online | 0.854 |
+=== 15 400 20
+15 voters, accuracies uniform in [0.35, 0.95], 400 two-way questions, 20 seeds (8000 decisions)
+
+| rule | group accuracy |
+|---|---|
+| majority | 0.877 |
+| oracle log-odds | 0.976 |
+| calibrate linear | 0.936 |
+| calibrate log-odds | 0.974 |
+| learn hedge | 0.891 |
+| learn hedge, share 0.1 | 0.937 |
+| learn log-odds online | 0.972 |
+=== 9 60 20
+9 voters, accuracies uniform in [0.35, 0.95], 60 two-way questions, 20 seeds (1200 decisions)
+
+| rule | group accuracy |
+|---|---|
+| majority | 0.831 |
+| oracle log-odds | 0.943 |
+| calibrate linear | 0.889 |
+| calibrate log-odds | 0.924 |
+| learn hedge | 0.887 |
+| learn hedge, share 0.1 | 0.880 |
+| learn log-odds online | 0.919 |
+ONE-DONE

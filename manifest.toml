@@ -192,3 +192,11 @@ regenerate = "the log, results/mab-qa-cr-11764.txt"
 crate = "leidarljos/landscape (private while rgsaddle is): Gaussian wells over the embeddings, cores by L-BFGS descent (rgmin), saddles by minimum-mode following (rgsaddle)"
 jobs = ["jobs/mab-survey.sbatch (cores and saddles per conflict-resolution record, kernel a third of the neighbour distance)", "jobs/saddle-conflicts.sbatch and jobs/saddle-conflicts2.sbatch (the point-scale saddles scored against the replacement rule)", "jobs/mab-gnn.sbatch (edge inference with a GraphSAGE link predictor; jobs/gnn-env.sbatch builds its environment)", "jobs/mab-dump-cr2.sbatch and jobs/mab-qa-cr2.sbatch (the saddle, network, object-chaining and live arms in one reading job)"]
 saddle_conflicts = "record 0 (455 facts, 191 same-head pairs): precision at 50 0.90 (scale 0.2) and 0.94 (0.15), recall 0.92 and 0.94; record 4 carries the same facts and repeats the numbers; record 1 (2310 facts) in jobs/saddle-conflicts2.sbatch"
+
+[results.synthetic_voters]
+log = "results/voters-11808.txt"
+job = "jobs/voters.sbatch"
+code = "consensus crate, examples/synthetic_voters.rs (the real settle, Dawid-Skene and log-odds rules on voters of known accuracy)"
+protocol = "voters with accuracies uniform in [0.35, 0.95], two-way questions with a known truth, 20 seeds; group accuracy per rule"
+result = "9 voters, 400 questions: majority 0.820, linear calibration 0.873, log-odds calibration 0.934, oracle log-odds 0.939, Hedge 0.831, Hedge with fixed share 0.877, running record as log odds 0.929; 15 voters 0.877 / 0.936 / 0.974 / 0.976 / 0.891 / 0.937 / 0.972"
+regenerate = "cargo run --release --example synthetic_voters -- 9 400 20 (deterministic seeds)"
