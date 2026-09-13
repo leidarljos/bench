@@ -175,3 +175,15 @@ questions = 2800
 top = 10
 note = "the rerun of the reading job with the reader's host prompt cache off; the log carries all three arms (fused top ten 0.552 over 2800, lexical 0.556, fused top five 0.537; accurate-retrieval questions alone 0.675, 0.674, 0.649). The two fused verdict files are held out of the package: a word in one reader answer trips the commit guard; the log is the record of them"
 regenerate = "python3 scripts/tables.py --verdicts results/mab-qa-lexical-top10-11759.jsonl"
+
+[results.mab_cr_hop2]
+files = []
+dump = "results/mab-dump-cr.jsonl"
+logs = ["results/mab-dump-cr-11763.txt", "results/mab-qa-cr-11764.txt"]
+jobs = ["jobs/mab-dump-cr.sbatch", "jobs/mab-qa-cr.sbatch"]
+questions = 800
+top = 10
+arms = "fused live (the replacement rule) and fused live hop2 (the objects of the strongest live facts asked about in turn, their live facts following)"
+result = "hop2 0.576 against live 0.535 over 800 (+0.041, interval +0.014 to +0.070); multi-hop rows +0.09 to +0.15 (three of four intervals exclude zero), single-hop rows -0.01 to -0.09"
+note = "both verdict files are held out of the package: a person's name in one reader answer trips the commit guard; the log carries their tables and the paired difference is in the notes. The same live arm read 0.480 in job 11750 and 0.535 here at temperature zero, so paired differences within one job are the comparison, not raw numbers across jobs"
+regenerate = "the log, results/mab-qa-cr-11764.txt"

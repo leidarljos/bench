@@ -1,0 +1,47 @@
+{"status":"ok"}=== arm: fused live hop2 top 10
+100 questions
+200 questions
+300 questions
+400 questions
+500 questions
+600 questions
+700 questions
+800 questions
+
+MemoryAgentBench answer accuracy, arm 'fused live hop2' top 10, timeline with gaps, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| factconsolidation_mh_262k | 100 | 0.210 |
+| factconsolidation_mh_32k | 100 | 0.260 |
+| factconsolidation_mh_64k | 100 | 0.310 |
+| factconsolidation_mh_6k | 100 | 0.400 |
+| factconsolidation_sh_262k | 100 | 0.870 |
+| factconsolidation_sh_32k | 100 | 0.870 |
+| factconsolidation_sh_64k | 100 | 0.870 |
+| factconsolidation_sh_6k | 100 | 0.820 |
+| all | 800 | 0.576 |
+=== arm: fused live top 10
+100 questions
+200 questions
+300 questions
+400 questions
+500 questions
+600 questions
+700 questions
+800 questions
+
+MemoryAgentBench answer accuracy, arm 'fused live' top 10, timeline with gaps, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| factconsolidation_mh_262k | 100 | 0.060 |
+| factconsolidation_mh_32k | 100 | 0.140 |
+| factconsolidation_mh_64k | 100 | 0.160 |
+| factconsolidation_mh_6k | 100 | 0.310 |
+| factconsolidation_sh_262k | 100 | 0.890 |
+| factconsolidation_sh_32k | 100 | 0.880 |
+| factconsolidation_sh_64k | 100 | 0.930 |
+| factconsolidation_sh_6k | 100 | 0.910 |
+| all | 800 | 0.535 |
+ONE-DONE

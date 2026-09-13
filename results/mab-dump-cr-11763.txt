@@ -1,0 +1,70 @@
+100 questions so far, 22s
+200 questions so far, 42s
+300 questions so far, 62s
+400 questions so far, 89s
+500 questions so far, 109s
+600 questions so far, 132s
+700 questions so far, 153s
+800 questions so far, 176s
+answer-bearing retrieval (a proxy; the reader's accuracy is the metric)
+
+| source | arm | asked | answer in top 1 | answer in top 5 | answer in top 10 |
+|---|---|---|---|---|---|
+| factconsolidation_mh_262k | dense | 100 | 0.010 | 0.080 | 0.120 |
+| factconsolidation_mh_262k | fused | 100 | 0.010 | 0.070 | 0.090 |
+| factconsolidation_mh_262k | fused latest | 100 | 0.020 | 0.050 | 0.090 |
+| factconsolidation_mh_262k | fused live | 100 | 0.030 | 0.090 | 0.140 |
+| factconsolidation_mh_262k | fused live hop2 | 100 | 0.020 | 0.250 | 0.400 |
+| factconsolidation_mh_262k | lexical | 100 | 0.000 | 0.090 | 0.110 |
+| factconsolidation_mh_32k | dense | 100 | 0.010 | 0.110 | 0.230 |
+| factconsolidation_mh_32k | fused | 100 | 0.010 | 0.120 | 0.190 |
+| factconsolidation_mh_32k | fused latest | 100 | 0.020 | 0.130 | 0.190 |
+| factconsolidation_mh_32k | fused live | 100 | 0.040 | 0.150 | 0.240 |
+| factconsolidation_mh_32k | fused live hop2 | 100 | 0.010 | 0.340 | 0.510 |
+| factconsolidation_mh_32k | lexical | 100 | 0.000 | 0.060 | 0.150 |
+| factconsolidation_mh_64k | dense | 100 | 0.010 | 0.120 | 0.210 |
+| factconsolidation_mh_64k | fused | 100 | 0.010 | 0.110 | 0.170 |
+| factconsolidation_mh_64k | fused latest | 100 | 0.020 | 0.140 | 0.170 |
+| factconsolidation_mh_64k | fused live | 100 | 0.020 | 0.140 | 0.210 |
+| factconsolidation_mh_64k | fused live hop2 | 100 | 0.010 | 0.320 | 0.540 |
+| factconsolidation_mh_64k | lexical | 100 | 0.010 | 0.050 | 0.140 |
+| factconsolidation_mh_6k | dense | 100 | 0.000 | 0.230 | 0.440 |
+| factconsolidation_mh_6k | fused | 100 | 0.000 | 0.240 | 0.420 |
+| factconsolidation_mh_6k | fused latest | 100 | 0.100 | 0.270 | 0.420 |
+| factconsolidation_mh_6k | fused live | 100 | 0.080 | 0.320 | 0.510 |
+| factconsolidation_mh_6k | fused live hop2 | 100 | 0.000 | 0.530 | 0.700 |
+| factconsolidation_mh_6k | lexical | 100 | 0.000 | 0.110 | 0.260 |
+| factconsolidation_sh_262k | dense | 100 | 0.420 | 1.000 | 1.000 |
+| factconsolidation_sh_262k | fused | 100 | 0.450 | 1.000 | 1.000 |
+| factconsolidation_sh_262k | fused latest | 100 | 0.280 | 0.800 | 1.000 |
+| factconsolidation_sh_262k | fused live | 100 | 0.180 | 0.610 | 0.930 |
+| factconsolidation_sh_262k | fused live hop2 | 100 | 0.920 | 0.930 | 0.930 |
+| factconsolidation_sh_262k | lexical | 100 | 0.380 | 0.990 | 0.990 |
+| factconsolidation_sh_32k | dense | 100 | 0.570 | 1.000 | 1.000 |
+| factconsolidation_sh_32k | fused | 100 | 0.550 | 1.000 | 1.000 |
+| factconsolidation_sh_32k | fused latest | 100 | 0.300 | 0.730 | 1.000 |
+| factconsolidation_sh_32k | fused live | 100 | 0.180 | 0.590 | 0.950 |
+| factconsolidation_sh_32k | fused live hop2 | 100 | 0.940 | 0.960 | 0.960 |
+| factconsolidation_sh_32k | lexical | 100 | 0.500 | 1.000 | 1.000 |
+| factconsolidation_sh_64k | dense | 100 | 0.590 | 1.000 | 1.000 |
+| factconsolidation_sh_64k | fused | 100 | 0.570 | 1.000 | 1.000 |
+| factconsolidation_sh_64k | fused latest | 100 | 0.340 | 0.830 | 1.000 |
+| factconsolidation_sh_64k | fused live | 100 | 0.250 | 0.710 | 0.970 |
+| factconsolidation_sh_64k | fused live hop2 | 100 | 0.960 | 0.960 | 0.970 |
+| factconsolidation_sh_64k | lexical | 100 | 0.480 | 1.000 | 1.000 |
+| factconsolidation_sh_6k | dense | 100 | 0.490 | 1.000 | 1.000 |
+| factconsolidation_sh_6k | fused | 100 | 0.530 | 1.000 | 1.000 |
+| factconsolidation_sh_6k | fused latest | 100 | 0.200 | 0.690 | 1.000 |
+| factconsolidation_sh_6k | fused live | 100 | 0.180 | 0.570 | 0.970 |
+| factconsolidation_sh_6k | fused live hop2 | 100 | 0.960 | 0.970 | 0.970 |
+| factconsolidation_sh_6k | lexical | 100 | 0.430 | 1.000 | 1.000 |
+| all | lexical | 800 | 0.225 | 0.537 | 0.581 |
+| all | dense | 800 | 0.263 | 0.568 | 0.625 |
+| all | fused | 800 | 0.266 | 0.568 | 0.609 |
+| all | fused latest | 800 | 0.160 | 0.455 | 0.609 |
+| all | fused live | 800 | 0.120 | 0.398 | 0.615 |
+| all | fused live hop2 | 800 | 0.477 | 0.657 | 0.748 |
+
+800 questions in 176s
+800 ~/mab-dump-cr.jsonl
+ONE-DONE
