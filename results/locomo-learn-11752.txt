@@ -1,0 +1,40 @@
+{"status":"ok"}=== learn: none top 10
+conversation 8: 156 questions
+conversation 9: 158 questions
+
+LoCoMo answer accuracy, arm 'turns fused, learn none' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.440 |
+| category-2 | 321 | 0.377 |
+| category-3 | 96 | 0.365 |
+| category-4 | 841 | 0.736 |
+| all | 1540 | 0.584 |
+=== learn: fsrs top 10
+conversation 8: 156 questions
+conversation 9: 158 questions
+
+LoCoMo answer accuracy, arm 'turns fused, learn fsrs' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.355 |
+| category-2 | 321 | 0.293 |
+| category-3 | 96 | 0.469 |
+| category-4 | 841 | 0.530 |
+| all | 1540 | 0.445 |
+=== learn: oracle top 10
+conversation 8: 156 questions
+conversation 9: 158 questions
+
+LoCoMo answer accuracy, arm 'turns fused, learn oracle' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.401 |
+| category-2 | 321 | 0.349 |
+| category-3 | 96 | 0.427 |
+| category-4 | 841 | 0.680 |
+| all | 1540 | 0.544 |
+ONE-DONE

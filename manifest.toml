@@ -133,3 +133,22 @@ questions = 2800
 splits = ["Conflict_Resolution", "Accurate_Retrieval"]
 arms = ["lexical", "dense", "fused", "fused latest (fact lists)", "fused live (fact lists)"]
 note = "the package copy carries each question's split, row, index, type, date and the document indices each arm ranked; the question and answer text are the dataset's own words and are read back from it by (split, row, question_index). The log holds the answer-bearing proxy table as printed; the chunk store (~60 MB of benchmark text) stays out of the package and is rebuilt by the job."
+
+[results.locomo_learn]
+files = ["results/locomo-learn-none-top10-11752.jsonl", "results/locomo-learn-fsrs-top10-11752.jsonl", "results/locomo-learn-oracle-top10-11752.jsonl"]
+dump = "results/locomo-dump-scored.jsonl"
+log = "results/locomo-learn-11752.txt"
+job = "jobs/locomo-learn.sbatch (after jobs/locomo-dump2.sbatch)"
+questions = 1540
+top = 10
+protocol = "questions of one conversation in order; the turns handed to the reader graded after each answer (none: no grading; fsrs: by the judge's verdict; oracle: by the gold evidence); the next question's fused hits reweighed by FSRS retrievability since last review, floor 0.25"
+regenerate = "python3 scripts/tables.py --verdicts results/locomo-learn-none-top10-11752.jsonl --verdicts results/locomo-learn-fsrs-top10-11752.jsonl --verdicts results/locomo-learn-oracle-top10-11752.jsonl"
+
+[results.mab_qa_conflict]
+files = ["results/mab-qa-fused-live-top10-11750.jsonl", "results/mab-qa-fused-latest-top10-11750.jsonl"]
+log = "results/mab-qa-11750.txt"
+job = "jobs/mab-qa.sbatch"
+questions = 800
+top = 10
+note = "the conflict-resolution arms of the reading job; the reader server was killed for memory during the third arm (its host prompt cache), so the fused, lexical and top-five arms in this log are invalid past the first 815 answers and rerun as jobs/mab-qa2.sbatch"
+regenerate = "python3 scripts/tables.py --verdicts results/mab-qa-fused-live-top10-11750.jsonl --verdicts results/mab-qa-fused-latest-top10-11750.jsonl"

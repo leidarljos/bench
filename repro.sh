@@ -20,6 +20,10 @@ case "${1:-tables}" in
     python3 scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category
     python3 scripts/tables.py --verdicts results/lme-qa-oracle-11663.jsonl \
       --verdicts results/lme-qa-sessions-fused-11663.jsonl --verdicts results/lme-qa-sessions-11663.jsonl
+    python3 scripts/tables.py --verdicts results/locomo-learn-none-top10-11752.jsonl \
+      --verdicts results/locomo-learn-fsrs-top10-11752.jsonl --verdicts results/locomo-learn-oracle-top10-11752.jsonl
+    python3 scripts/tables.py --verdicts results/mab-qa-fused-live-top10-11750.jsonl \
+      --verdicts results/mab-qa-fused-latest-top10-11750.jsonl
     python3 scripts/tables.py --verdicts results/locomo-qa-oracle-top10-11672.jsonl \
       --verdicts results/locomo-qa-turns-fused-top20-11672.jsonl \
       --verdicts results/locomo-qa-turns-fused-top10-11672.jsonl --verdicts results/locomo-qa-turns-top10-11672.jsonl

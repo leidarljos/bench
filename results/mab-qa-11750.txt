@@ -1,0 +1,144 @@
+{"status":"ok"}=== arm: fused live top 10
+100 questions
+200 questions
+300 questions
+400 questions
+500 questions
+600 questions
+700 questions
+800 questions
+
+MemoryAgentBench answer accuracy, arm 'fused live' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| factconsolidation_mh_262k | 100 | 0.030 |
+| factconsolidation_mh_32k | 100 | 0.130 |
+| factconsolidation_mh_64k | 100 | 0.120 |
+| factconsolidation_mh_6k | 100 | 0.270 |
+| factconsolidation_sh_262k | 100 | 0.760 |
+| factconsolidation_sh_32k | 100 | 0.820 |
+| factconsolidation_sh_64k | 100 | 0.850 |
+| factconsolidation_sh_6k | 100 | 0.860 |
+| all | 800 | 0.480 |
+=== arm: fused latest top 10
+100 questions
+200 questions
+300 questions
+400 questions
+500 questions
+600 questions
+700 questions
+800 questions
+
+MemoryAgentBench answer accuracy, arm 'fused latest' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| factconsolidation_mh_262k | 100 | 0.020 |
+| factconsolidation_mh_32k | 100 | 0.030 |
+| factconsolidation_mh_64k | 100 | 0.050 |
+| factconsolidation_mh_6k | 100 | 0.060 |
+| factconsolidation_sh_262k | 100 | 0.340 |
+| factconsolidation_sh_32k | 100 | 0.420 |
+| factconsolidation_sh_64k | 100 | 0.410 |
+| factconsolidation_sh_6k | 100 | 0.330 |
+| all | 800 | 0.207 |
+=== arm: fused top 10
+1900 questions
+2000 questions
+2100 questions
+2200 questions
+2300 questions
+2400 questions
+2500 questions
+2600 questions
+2700 questions
+2800 questions
+
+MemoryAgentBench answer accuracy, arm 'fused' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| eventqa_131072 | 500 | 0.000 |
+| eventqa_65536 | 500 | 0.000 |
+| eventqa_full | 500 | 0.000 |
+| factconsolidation_mh_262k | 100 | 0.020 |
+| factconsolidation_mh_32k | 100 | 0.030 |
+| factconsolidation_mh_64k | 100 | 0.040 |
+| factconsolidation_mh_6k | 100 | 0.070 |
+| factconsolidation_sh_262k | 100 | 0.440 |
+| factconsolidation_sh_32k | 100 | 0.550 |
+| factconsolidation_sh_64k | 100 | 0.510 |
+| factconsolidation_sh_6k | 100 | 0.330 |
+| longmemeval_s* | 300 | 0.000 |
+| ruler_qa1_197K | 100 | 0.110 |
+| ruler_qa2_421K | 100 | 0.000 |
+| all | 2800 | 0.075 |
+=== arm: lexical top 10
+1900 questions
+2000 questions
+2100 questions
+2200 questions
+2300 questions
+2400 questions
+2500 questions
+2600 questions
+2700 questions
+2800 questions
+
+MemoryAgentBench answer accuracy, arm 'lexical' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| eventqa_131072 | 500 | 0.000 |
+| eventqa_65536 | 500 | 0.000 |
+| eventqa_full | 500 | 0.000 |
+| factconsolidation_mh_262k | 100 | 0.000 |
+| factconsolidation_mh_32k | 100 | 0.000 |
+| factconsolidation_mh_64k | 100 | 0.000 |
+| factconsolidation_mh_6k | 100 | 0.000 |
+| factconsolidation_sh_262k | 100 | 0.000 |
+| factconsolidation_sh_32k | 100 | 0.000 |
+| factconsolidation_sh_64k | 100 | 0.000 |
+| factconsolidation_sh_6k | 100 | 0.000 |
+| longmemeval_s* | 300 | 0.000 |
+| ruler_qa1_197K | 100 | 0.000 |
+| ruler_qa2_421K | 100 | 0.000 |
+| all | 2800 | 0.000 |
+=== arm: fused top 5
+/var/spool/slurmd/job11750/slurm_script: line 26: 3246699 Killed                     "$HOME/llama.cpp/build/bin/llama-server" -m "$MODEL" -c 65536 -np 2 -ngl 99 -fa on --port 8089 --host 127.0.0.1 > "$HOME/llama-server-$SLURM_JOB_ID.log" 2>&1  (wd: ~)
+1900 questions
+2000 questions
+2100 questions
+2200 questions
+2300 questions
+2400 questions
+2500 questions
+2600 questions
+2700 questions
+2800 questions
+
+MemoryAgentBench answer accuracy, arm 'fused' top 5, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| eventqa_131072 | 500 | 0.000 |
+| eventqa_65536 | 500 | 0.000 |
+| eventqa_full | 500 | 0.000 |
+| factconsolidation_mh_262k | 100 | 0.000 |
+| factconsolidation_mh_32k | 100 | 0.000 |
+| factconsolidation_mh_64k | 100 | 0.000 |
+| factconsolidation_mh_6k | 100 | 0.000 |
+| factconsolidation_sh_262k | 100 | 0.000 |
+| factconsolidation_sh_32k | 100 | 0.000 |
+| factconsolidation_sh_64k | 100 | 0.000 |
+| factconsolidation_sh_6k | 100 | 0.000 |
+| longmemeval_s* | 300 | 0.000 |
+| ruler_qa1_197K | 100 | 0.000 |
+| ruler_qa2_421K | 100 | 0.000 |
+| all | 2800 | 0.000 |
+/var/spool/slurmd/job11750/slurm_script: line 28: 3246699 Killed                     "$HOME/llama.cpp/build/bin/llama-server" -m "$MODEL" -c 65536 -np 2 -ngl 99 -fa on --port 8089 --host 127.0.0.1 > "$HOME/llama-server-$SLURM_JOB_ID.log" 2>&1  (wd: ~)
+/var/spool/slurmd/job11750/slurm_script: line 28: kill: (3246699) - No such process
+ONE-DONE
+[2026-09-12T20:01:53.531] error: Detected 1 oom_kill event in StepId=11750.batch. Some of the step tasks have been OOM Killed.

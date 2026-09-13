@@ -350,6 +350,64 @@ results/lme-qa-sessions-11663.jsonl (n=100)
 | single-session-user | 64 | 0.797 |
 | all | 100 | 0.570 |
 
+results/locomo-learn-none-top10-11752.jsonl (n=1540)
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.440 |
+| category-2 | 321 | 0.377 |
+| category-3 | 96 | 0.365 |
+| category-4 | 841 | 0.736 |
+| all | 1540 | 0.584 |
+
+results/locomo-learn-fsrs-top10-11752.jsonl (n=1540)
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.355 |
+| category-2 | 321 | 0.293 |
+| category-3 | 96 | 0.469 |
+| category-4 | 841 | 0.530 |
+| all | 1540 | 0.445 |
+
+results/locomo-learn-oracle-top10-11752.jsonl (n=1540)
+
+| type | asked | accuracy |
+|---|---|---|
+| category-1 | 282 | 0.401 |
+| category-2 | 321 | 0.349 |
+| category-3 | 96 | 0.427 |
+| category-4 | 841 | 0.680 |
+| all | 1540 | 0.544 |
+
+results/mab-qa-fused-live-top10-11750.jsonl (n=800)
+
+| type | asked | accuracy |
+|---|---|---|
+| factconsolidation_mh_262k | 100 | 0.030 |
+| factconsolidation_mh_32k | 100 | 0.130 |
+| factconsolidation_mh_64k | 100 | 0.120 |
+| factconsolidation_mh_6k | 100 | 0.270 |
+| factconsolidation_sh_262k | 100 | 0.760 |
+| factconsolidation_sh_32k | 100 | 0.820 |
+| factconsolidation_sh_64k | 100 | 0.850 |
+| factconsolidation_sh_6k | 100 | 0.860 |
+| all | 800 | 0.480 |
+
+results/mab-qa-fused-latest-top10-11750.jsonl (n=800)
+
+| type | asked | accuracy |
+|---|---|---|
+| factconsolidation_mh_262k | 100 | 0.020 |
+| factconsolidation_mh_32k | 100 | 0.030 |
+| factconsolidation_mh_64k | 100 | 0.050 |
+| factconsolidation_mh_6k | 100 | 0.060 |
+| factconsolidation_sh_262k | 100 | 0.340 |
+| factconsolidation_sh_32k | 100 | 0.420 |
+| factconsolidation_sh_64k | 100 | 0.410 |
+| factconsolidation_sh_6k | 100 | 0.330 |
+| all | 800 | 0.207 |
+
 results/locomo-qa-oracle-top10-11672.jsonl (n=1540)
 
 | type | asked | accuracy |
