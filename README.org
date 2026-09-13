@@ -17,6 +17,15 @@ the files a reader needs to regenerate every table without a model call.
 | =scripts/tables.py= | regenerates every retrieval and accuracy table from the dumps and verdicts |
 | =repro.sh= | =tables= recomputes the tables; =data= fetches and checks the inputs; =jobs= resubmits the chain |
 
+* Runs in MLflow
+
+=scripts/mlflow_log.py= logs one run per (job, arm) to an MLflow tracking
+store from the same files the tables read: parameters as they ran,
+accuracy overall and by type or hit@k and recall@k, and the raw file as
+the artifact. The store is a sqlite file on the build host
+(=MLFLOW_TRACKING_URI=sqlite:///$HOME/mlruns/mlflow.db=); =mlflow ui=
+over an ssh tunnel shows it. Free software, no account.
+
 * Regenerate the tables
 
 #+begin_src console
@@ -25,7 +34,11 @@ $ ./repro.sh tables
 
 No model, no network. The committed copy is =results/tables.expected.md=
 and the repository's check regenerates and diffs it on every push, so a
-table that stops matching its inputs fails a build. Retrieval tables are
+table that stops matching its inputs fails a build. Accuracy rows carry a 95%
+bootstrap interval, and verdict files given together print the paired
+difference of each against the one before it, over the questions both
+answered, overall and by type, with its interval; a claim that one arm
+beats another rests on that interval, not on the raw gap. Retrieval tables are
 counts over the dumps
 (hit@k: any gold id in the top k; recall@k: the share of gold ids in the
 top k). Accuracy tables are counts over the verdicts. The numbers in the

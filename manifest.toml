@@ -15,6 +15,9 @@ questions = 500
 answerable = 470            # `_abs` questions carry no answer session and are left out
 doi = "10.48550/arXiv.2410.10813"
 
+[tracking]
+mlflow = "sqlite:///~/mlruns/mlflow.db on the build host; scripts/mlflow_log.py backfills from the verdict and dump files; experiments longmemeval, locomo, memoryagentbench"
+
 [datasets.memoryagentbench]
 url = "https://huggingface.co/datasets/ai-hyz/MemoryAgentBench"
 paper = "10.48550/arXiv.2507.05257"
