@@ -152,3 +152,14 @@ questions = 800
 top = 10
 note = "the conflict-resolution arms of the reading job; the reader server was killed for memory during the third arm (its host prompt cache), so the fused, lexical and top-five arms in this log are invalid past the first 815 answers and rerun as jobs/mab-qa2.sbatch"
 regenerate = "python3 scripts/tables.py --verdicts results/mab-qa-fused-live-top10-11750.jsonl --verdicts results/mab-qa-fused-latest-top10-11750.jsonl"
+
+[results.lme_qa_gaps]
+file = "results/lme-qa-gaps-sessions-fused-top5-11753.jsonl"
+log = "results/lme-qa-gaps-11753.txt"
+job = "jobs/lme-qa-gaps.sbatch"
+questions = 350
+types = "temporal-reasoning, knowledge-update, multi-session, single-session-preference"
+top = 5
+prompt = "timeline, with the days between every pair of retrieved sessions listed after them (the harness default from this commit on)"
+compare = "the raw and marked-distances arms of job 11705 over the same questions: 0.431 and 0.420 against 0.460"
+regenerate = "python3 scripts/tables.py --verdicts results/lme-qa-gaps-sessions-fused-top5-11753.jsonl"

@@ -1,0 +1,14 @@
+{"status":"ok"}=== arm: sessions fused top 5 gaps
+325 questions
+350 questions
+
+LongMemEval_S answer accuracy, arm 'sessions fused' top 5, timeline with gaps, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| knowledge-update | 72 | 0.819 |
+| multi-session | 121 | 0.372 |
+| single-session-preference | 30 | 0.267 |
+| temporal-reasoning | 127 | 0.386 |
+| all | 350 | 0.460 |
+ONE-DONE

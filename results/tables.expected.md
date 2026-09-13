@@ -350,6 +350,16 @@ results/lme-qa-sessions-11663.jsonl (n=100)
 | single-session-user | 64 | 0.797 |
 | all | 100 | 0.570 |
 
+results/lme-qa-gaps-sessions-fused-top5-11753.jsonl (n=350)
+
+| type | asked | accuracy |
+|---|---|---|
+| knowledge-update | 72 | 0.819 |
+| multi-session | 121 | 0.372 |
+| single-session-preference | 30 | 0.267 |
+| temporal-reasoning | 127 | 0.386 |
+| all | 350 | 0.460 |
+
 results/locomo-learn-none-top10-11752.jsonl (n=1540)
 
 | type | asked | accuracy |
