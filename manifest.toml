@@ -187,3 +187,8 @@ arms = "fused live (the replacement rule) and fused live hop2 (the objects of th
 result = "hop2 0.576 against live 0.535 over 800 (+0.041, interval +0.014 to +0.070); multi-hop rows +0.09 to +0.15 (three of four intervals exclude zero), single-hop rows -0.01 to -0.09"
 note = "both verdict files are held out of the package: a person's name in one reader answer trips the commit guard; the log carries their tables and the paired difference is in the notes. The same live arm read 0.480 in job 11750 and 0.535 here at temperature zero, so paired differences within one job are the comparison, not raw numbers across jobs"
 regenerate = "the log, results/mab-qa-cr-11764.txt"
+
+[landscape]
+crate = "leidarljos/landscape (private while rgsaddle is): Gaussian wells over the embeddings, cores by L-BFGS descent (rgmin), saddles by minimum-mode following (rgsaddle)"
+jobs = ["jobs/mab-survey.sbatch (cores and saddles per conflict-resolution record, kernel a third of the neighbour distance)", "jobs/saddle-conflicts.sbatch and jobs/saddle-conflicts2.sbatch (the point-scale saddles scored against the replacement rule)", "jobs/mab-gnn.sbatch (edge inference with a GraphSAGE link predictor; jobs/gnn-env.sbatch builds its environment)", "jobs/mab-dump-cr2.sbatch and jobs/mab-qa-cr2.sbatch (the saddle, network, object-chaining and live arms in one reading job)"]
+saddle_conflicts = "record 0 (455 facts, 191 same-head pairs): precision at 50 0.90 (scale 0.2) and 0.94 (0.15), recall 0.92 and 0.94; record 4 carries the same facts and repeats the numbers; record 1 (2310 facts) in jobs/saddle-conflicts2.sbatch"
