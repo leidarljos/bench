@@ -191,7 +191,7 @@ regenerate = "the log, results/mab-qa-cr-11764.txt"
 [landscape]
 crate = "leidarljos/landscape (private while rgsaddle is): Gaussian wells over the embeddings, cores by L-BFGS descent (rgmin), saddles by minimum-mode following (rgsaddle)"
 jobs = ["jobs/mab-survey.sbatch (cores and saddles per conflict-resolution record, kernel a third of the neighbour distance)", "jobs/saddle-conflicts.sbatch and jobs/saddle-conflicts2.sbatch (the point-scale saddles scored against the replacement rule)", "jobs/mab-gnn.sbatch (edge inference with a GraphSAGE link predictor; jobs/gnn-env.sbatch builds its environment)", "jobs/mab-dump-cr2.sbatch and jobs/mab-qa-cr2.sbatch (the saddle, network, object-chaining and live arms in one reading job)"]
-saddle_conflicts = "record 0 (455 facts, 191 same-head pairs): precision at 50 0.90 (scale 0.2) and 0.94 (0.15), recall 0.92 and 0.94; record 4 carries the same facts and repeats the numbers; record 1 (2310 facts) in jobs/saddle-conflicts2.sbatch"
+saddle_conflicts = "record 0 (455 facts, 191 same-head pairs): precision at 50 0.90 (scale 0.2) and 0.94 (0.15), recall 0.92 and 0.94; record 4 carries the same facts and repeats the numbers; record 1 (2310 facts, 1645 pairs, five neighbours): precision at 50 0.94, at 100 0.93, recall 0.56"
 
 [results.synthetic_voters]
 log = "results/voters-11808.txt"

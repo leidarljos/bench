@@ -1,0 +1,42 @@
+=== row 0 scale 0.2
+455 points, sigma 0.1081, 455 cores, 1505 saddles, 82.8s
+Installed 8 packages in 60ms
+455 facts, 191 contradicting pairs by the rule, 1505 saddles
+precision at 10: 0.800 (8 of 10)
+precision at 20: 0.900 (18 of 20)
+precision at 50: 0.900 (45 of 50)
+precision at 100: 0.860 (86 of 100)
+recall of the rule's pairs among all saddles: 0.916
+  a low pass the rule does not call a contradiction: '377. The capital of United Kingdom is London.' | '378. The capital of England is London.'
+  a low pass the rule does not call a contradiction: '115. The name of the current head of state in United States of America' | '432. The name of the current head of the United States of America gove'
+=== row 0 scale 0.15
+455 points, sigma 0.0810, 455 cores, 1505 saddles, 24.2s
+455 facts, 191 contradicting pairs by the rule, 1505 saddles
+precision at 10: 0.800 (8 of 10)
+precision at 20: 0.900 (18 of 20)
+precision at 50: 0.940 (47 of 50)
+precision at 100: 0.890 (89 of 100)
+recall of the rule's pairs among all saddles: 0.942
+  a low pass the rule does not call a contradiction: '377. The capital of United Kingdom is London.' | '378. The capital of England is London.'
+  a low pass the rule does not call a contradiction: '115. The name of the current head of state in United States of America' | '432. The name of the current head of the United States of America gove'
+=== row 4 scale 0.2
+455 points, sigma 0.1081, 455 cores, 1505 saddles, 87.4s
+455 facts, 191 contradicting pairs by the rule, 1505 saddles
+precision at 10: 0.800 (8 of 10)
+precision at 20: 0.900 (18 of 20)
+precision at 50: 0.900 (45 of 50)
+precision at 100: 0.860 (86 of 100)
+recall of the rule's pairs among all saddles: 0.916
+  a low pass the rule does not call a contradiction: '377. The capital of United Kingdom is London.' | '378. The capital of England is London.'
+  a low pass the rule does not call a contradiction: '115. The name of the current head of state in United States of America' | '432. The name of the current head of the United States of America gove'
+=== row 4 scale 0.15
+455 points, sigma 0.0810, 455 cores, 1505 saddles, 23.8s
+455 facts, 191 contradicting pairs by the rule, 1505 saddles
+precision at 10: 0.800 (8 of 10)
+precision at 20: 0.900 (18 of 20)
+precision at 50: 0.940 (47 of 50)
+precision at 100: 0.890 (89 of 100)
+recall of the rule's pairs among all saddles: 0.942
+  a low pass the rule does not call a contradiction: '377. The capital of United Kingdom is London.' | '378. The capital of England is London.'
+  a low pass the rule does not call a contradiction: '115. The name of the current head of state in United States of America' | '432. The name of the current head of the United States of America gove'
+ONE-DONE

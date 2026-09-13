@@ -1,0 +1,11 @@
+=== row 1 scale 0.2
+2310 points, sigma 0.1005, 2310 cores, 8065 saddles, 2525.4s
+2310 facts, 1645 contradicting pairs by the rule, 8065 saddles
+precision at 10: 0.800 (8 of 10)
+precision at 20: 0.900 (18 of 20)
+precision at 50: 0.940 (47 of 50)
+precision at 100: 0.930 (93 of 100)
+recall of the rule's pairs among all saddles: 0.564
+  a low pass the rule does not call a contradiction: '1130. The name of the current head of state in United States of Americ' | '1164. The name of the current head of the United States of America gov'
+  a low pass the rule does not call a contradiction: "603. Martin O'Neill is associated with the sport of association footba" | "1336. Michael O'Neill is associated with the sport of association foot"
+ONE-DONE
