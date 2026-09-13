@@ -360,6 +360,26 @@ results/lme-qa-gaps-sessions-fused-top5-11753.jsonl (n=350)
 | temporal-reasoning | 127 | 0.386 |
 | all | 350 | 0.460 |
 
+results/mab-qa-lexical-top10-11759.jsonl (n=2800)
+
+| type | asked | accuracy |
+|---|---|---|
+| eventqa_131072 | 500 | 0.748 |
+| eventqa_65536 | 500 | 0.830 |
+| eventqa_full | 500 | 0.642 |
+| factconsolidation_mh_262k | 100 | 0.040 |
+| factconsolidation_mh_32k | 100 | 0.040 |
+| factconsolidation_mh_64k | 100 | 0.070 |
+| factconsolidation_mh_6k | 100 | 0.030 |
+| factconsolidation_sh_262k | 100 | 0.440 |
+| factconsolidation_sh_32k | 100 | 0.550 |
+| factconsolidation_sh_64k | 100 | 0.560 |
+| factconsolidation_sh_6k | 100 | 0.380 |
+| longmemeval_s* | 300 | 0.370 |
+| ruler_qa1_197K | 100 | 0.730 |
+| ruler_qa2_421K | 100 | 0.530 |
+| all | 2800 | 0.556 |
+
 results/locomo-learn-none-top10-11752.jsonl (n=1540)
 
 | type | asked | accuracy |

@@ -1,0 +1,94 @@
+{"status":"ok"}=== arm: fused top 10
+1900 questions
+2000 questions
+2100 questions
+2200 questions
+2300 questions
+2400 questions
+2500 questions
+2600 questions
+2700 questions
+2800 questions
+
+MemoryAgentBench answer accuracy, arm 'fused' top 10, timeline, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| eventqa_131072 | 500 | 0.756 |
+| eventqa_65536 | 500 | 0.842 |
+| eventqa_full | 500 | 0.616 |
+| factconsolidation_mh_262k | 100 | 0.020 |
+| factconsolidation_mh_32k | 100 | 0.030 |
+| factconsolidation_mh_64k | 100 | 0.040 |
+| factconsolidation_mh_6k | 100 | 0.060 |
+| factconsolidation_sh_262k | 100 | 0.440 |
+| factconsolidation_sh_32k | 100 | 0.550 |
+| factconsolidation_sh_64k | 100 | 0.490 |
+| factconsolidation_sh_6k | 100 | 0.330 |
+| longmemeval_s* | 300 | 0.390 |
+| ruler_qa1_197K | 100 | 0.790 |
+| ruler_qa2_421K | 100 | 0.470 |
+| all | 2800 | 0.552 |
+=== arm: lexical top 10
+1900 questions
+2000 questions
+2100 questions
+2200 questions
+2300 questions
+2400 questions
+2500 questions
+2600 questions
+2700 questions
+2800 questions
+
+MemoryAgentBench answer accuracy, arm 'lexical' top 10, timeline with gaps, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| eventqa_131072 | 500 | 0.748 |
+| eventqa_65536 | 500 | 0.830 |
+| eventqa_full | 500 | 0.642 |
+| factconsolidation_mh_262k | 100 | 0.040 |
+| factconsolidation_mh_32k | 100 | 0.040 |
+| factconsolidation_mh_64k | 100 | 0.070 |
+| factconsolidation_mh_6k | 100 | 0.030 |
+| factconsolidation_sh_262k | 100 | 0.440 |
+| factconsolidation_sh_32k | 100 | 0.550 |
+| factconsolidation_sh_64k | 100 | 0.560 |
+| factconsolidation_sh_6k | 100 | 0.380 |
+| longmemeval_s* | 300 | 0.370 |
+| ruler_qa1_197K | 100 | 0.730 |
+| ruler_qa2_421K | 100 | 0.530 |
+| all | 2800 | 0.556 |
+=== arm: fused top 5
+1900 questions
+2000 questions
+2100 questions
+2200 questions
+2300 questions
+2400 questions
+2500 questions
+2600 questions
+2700 questions
+2800 questions
+
+MemoryAgentBench answer accuracy, arm 'fused' top 5, timeline with gaps, reader Qwen2.5-7B-Instruct-Q5_K_M, judge Qwen2.5-7B-Instruct-Q5_K_M
+
+| type | asked | accuracy |
+|---|---|---|
+| eventqa_131072 | 500 | 0.730 |
+| eventqa_65536 | 500 | 0.802 |
+| eventqa_full | 500 | 0.586 |
+| factconsolidation_mh_262k | 100 | 0.030 |
+| factconsolidation_mh_32k | 100 | 0.040 |
+| factconsolidation_mh_64k | 100 | 0.050 |
+| factconsolidation_mh_6k | 100 | 0.040 |
+| factconsolidation_sh_262k | 100 | 0.440 |
+| factconsolidation_sh_32k | 100 | 0.550 |
+| factconsolidation_sh_64k | 100 | 0.520 |
+| factconsolidation_sh_6k | 100 | 0.390 |
+| longmemeval_s* | 300 | 0.413 |
+| ruler_qa1_197K | 100 | 0.730 |
+| ruler_qa2_421K | 100 | 0.420 |
+| all | 2800 | 0.537 |
+ONE-DONE
