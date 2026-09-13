@@ -1,4 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.10"
+# dependencies = []
+# ///
 """Recompute every table in this package from the raw files beside it.
 
 Retrieval tables come from the dumps: one JSON line a question with the

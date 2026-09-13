@@ -19,7 +19,7 @@ the files a reader needs to regenerate every table without a model call.
 
 * Runs in MLflow
 
-=scripts/mlflow_log.py= logs one run per (job, arm) to an MLflow tracking
+=scripts/mlflow_log.py= (a uv script; =uv run --script= brings mlflow) logs one run per (job, arm) to an MLflow tracking
 store from the same files the tables read: parameters as they ran,
 accuracy overall and by type or hit@k and recall@k, and the raw file as
 the artifact. The store is a sqlite file on the build host
