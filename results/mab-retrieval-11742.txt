@@ -1,0 +1,92 @@
+100 questions so far, 28s
+200 questions so far, 136s
+300 questions so far, 361s
+400 questions so far, 1244s
+500 questions so far, 1269s
+600 questions so far, 1378s
+700 questions so far, 1612s
+800 questions so far, 2556s
+900 questions so far, 2963s
+1000 questions so far, 3655s
+1100 questions so far, 4594s
+1200 questions so far, 5935s
+1300 questions so far, 7031s
+1400 questions so far, 7773s
+1500 questions so far, 8743s
+1600 questions so far, 8892s
+1700 questions so far, 9041s
+1800 questions so far, 9191s
+1900 questions so far, 9392s
+2000 questions so far, 9590s
+2100 questions so far, 9849s
+2200 questions so far, 10109s
+2300 questions so far, 10369s
+2400 questions so far, 10631s
+2500 questions so far, 10896s
+2560 questions so far, 11525s
+2620 questions so far, 12087s
+2680 questions so far, 12681s
+2740 questions so far, 13219s
+2800 questions so far, 13806s
+| eventqa_65536 | lexical | 500 | 0.000 | 0.000 | 0.000 |
+| eventqa_full | dense | 500 | 0.000 | 0.000 | 0.000 |
+| eventqa_full | fused | 500 | 0.000 | 0.002 | 0.002 |
+| eventqa_full | lexical | 500 | 0.002 | 0.002 | 0.004 |
+| factconsolidation_mh_262k | dense | 100 | 0.010 | 0.080 | 0.120 |
+| factconsolidation_mh_262k | fused | 100 | 0.010 | 0.070 | 0.090 |
+| factconsolidation_mh_262k | fused latest | 100 | 0.020 | 0.050 | 0.090 |
+| factconsolidation_mh_262k | fused live | 100 | 0.020 | 0.080 | 0.120 |
+| factconsolidation_mh_262k | lexical | 100 | 0.000 | 0.090 | 0.110 |
+| factconsolidation_mh_32k | dense | 100 | 0.010 | 0.110 | 0.230 |
+| factconsolidation_mh_32k | fused | 100 | 0.010 | 0.120 | 0.190 |
+| factconsolidation_mh_32k | fused latest | 100 | 0.020 | 0.130 | 0.190 |
+| factconsolidation_mh_32k | fused live | 100 | 0.040 | 0.170 | 0.250 |
+| factconsolidation_mh_32k | lexical | 100 | 0.000 | 0.060 | 0.150 |
+| factconsolidation_mh_64k | dense | 100 | 0.010 | 0.120 | 0.210 |
+| factconsolidation_mh_64k | fused | 100 | 0.010 | 0.110 | 0.170 |
+| factconsolidation_mh_64k | fused latest | 100 | 0.020 | 0.140 | 0.170 |
+| factconsolidation_mh_64k | fused live | 100 | 0.010 | 0.130 | 0.200 |
+| factconsolidation_mh_64k | lexical | 100 | 0.010 | 0.050 | 0.140 |
+| factconsolidation_mh_6k | dense | 100 | 0.000 | 0.230 | 0.440 |
+| factconsolidation_mh_6k | fused | 100 | 0.000 | 0.240 | 0.420 |
+| factconsolidation_mh_6k | fused latest | 100 | 0.100 | 0.270 | 0.420 |
+| factconsolidation_mh_6k | fused live | 100 | 0.080 | 0.320 | 0.520 |
+| factconsolidation_mh_6k | lexical | 100 | 0.000 | 0.110 | 0.260 |
+| factconsolidation_sh_262k | dense | 100 | 0.420 | 1.000 | 1.000 |
+| factconsolidation_sh_262k | fused | 100 | 0.450 | 1.000 | 1.000 |
+| factconsolidation_sh_262k | fused latest | 100 | 0.280 | 0.800 | 1.000 |
+| factconsolidation_sh_262k | fused live | 100 | 0.190 | 0.670 | 0.970 |
+| factconsolidation_sh_262k | lexical | 100 | 0.380 | 0.990 | 0.990 |
+| factconsolidation_sh_32k | dense | 100 | 0.570 | 1.000 | 1.000 |
+| factconsolidation_sh_32k | fused | 100 | 0.550 | 1.000 | 1.000 |
+| factconsolidation_sh_32k | fused latest | 100 | 0.300 | 0.730 | 1.000 |
+| factconsolidation_sh_32k | fused live | 100 | 0.200 | 0.640 | 0.980 |
+| factconsolidation_sh_32k | lexical | 100 | 0.500 | 1.000 | 1.000 |
+| factconsolidation_sh_64k | dense | 100 | 0.590 | 1.000 | 1.000 |
+| factconsolidation_sh_64k | fused | 100 | 0.570 | 1.000 | 1.000 |
+| factconsolidation_sh_64k | fused latest | 100 | 0.340 | 0.830 | 1.000 |
+| factconsolidation_sh_64k | fused live | 100 | 0.250 | 0.730 | 0.990 |
+| factconsolidation_sh_64k | lexical | 100 | 0.480 | 1.000 | 1.000 |
+| factconsolidation_sh_6k | dense | 100 | 0.490 | 1.000 | 1.000 |
+| factconsolidation_sh_6k | fused | 100 | 0.530 | 1.000 | 1.000 |
+| factconsolidation_sh_6k | fused latest | 100 | 0.200 | 0.690 | 1.000 |
+| factconsolidation_sh_6k | fused live | 100 | 0.180 | 0.600 | 1.000 |
+| factconsolidation_sh_6k | lexical | 100 | 0.430 | 1.000 | 1.000 |
+| longmemeval_s* | dense | 300 | 0.217 | 0.407 | 0.433 |
+| longmemeval_s* | fused | 300 | 0.257 | 0.393 | 0.453 |
+| longmemeval_s* | lexical | 300 | 0.240 | 0.393 | 0.447 |
+| ruler_qa1_197K | dense | 100 | 0.360 | 0.680 | 0.780 |
+| ruler_qa1_197K | fused | 100 | 0.660 | 0.890 | 0.950 |
+| ruler_qa1_197K | lexical | 100 | 0.680 | 0.950 | 0.970 |
+| ruler_qa2_421K | dense | 100 | 0.340 | 0.510 | 0.610 |
+| ruler_qa2_421K | fused | 100 | 0.390 | 0.630 | 0.750 |
+| ruler_qa2_421K | lexical | 100 | 0.400 | 0.640 | 0.740 |
+| all | lexical | 2800 | 0.129 | 0.253 | 0.276 |
+| all | dense | 2800 | 0.123 | 0.249 | 0.275 |
+| all | fused | 2800 | 0.141 | 0.259 | 0.284 |
+| all | fused latest | 800 | 0.160 | 0.455 | 0.609 |
+| all | fused live | 800 | 0.121 | 0.417 | 0.629 |
+
+2800 questions in 13806s
+2800 ~/mab-dump.jsonl
+ONE-DONE

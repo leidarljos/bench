@@ -124,3 +124,12 @@ questions = 470
 arms = ["sessions", "sessions dense", "sessions fused", "sessions fused recency", "sessions fused window", "sessions fused island", "turns", "windows"]
 packset_commit = "the island arm commit after v0.7.2 (feat(bench): an island arm on LongMemEval)"
 regenerate = "python3 scripts/tables.py results/lme-dump-island.jsonl"
+
+[results.mab_dump]
+file = "results/mab-dump.jsonl"
+log = "results/mab-retrieval-11742.txt"
+job = "jobs/mab-dump.sbatch"
+questions = 2800
+splits = ["Conflict_Resolution", "Accurate_Retrieval"]
+arms = ["lexical", "dense", "fused", "fused latest (fact lists)", "fused live (fact lists)"]
+note = "the package copy carries each question's split, row, index, type, date and the document indices each arm ranked; the question and answer text are the dataset's own words and are read back from it by (split, row, question_index). The log holds the answer-bearing proxy table as printed; the chunk store (~60 MB of benchmark text) stays out of the package and is rebuilt by the job."
