@@ -1,0 +1,28 @@
+packset: listening on 127.0.0.1:8792
+PACKSET_URL=http://127.0.0.1:8792
+INSIDE_MEMORY_URL=http://127.0.0.1:8792
+ok	encoder	dense ballot on
+ok	pack	http://127.0.0.1:8792 workspace seat
+=== 1000 atoms (filled in 8.6 s), live 1000
+hook single 0.021 s (450 bytes)
+hook single 0.013 s (603 bytes)
+hook single 0.012 s (448 bytes)
+hook 8 concurrent 0.053 s
+search 0.013 s
+consolidate dry 0.015 s: 0 of 1000 live memories would close; `ljos consolidate --apply` closes them
+=== 5000 atoms (filled in 55.9 s), live 5000
+hook single 0.059 s (590 bytes)
+hook single 0.034 s (606 bytes)
+hook single 0.031 s (523 bytes)
+hook 8 concurrent 0.106 s
+search 0.033 s
+consolidate dry 0.071 s: 0 of 5000 live memories would close; `ljos consolidate --apply` closes them
+=== 10000 atoms (filled in 236.0 s), live 10000
+hook single 0.123 s (603 bytes)
+hook single 0.099 s (448 bytes)
+hook single 0.074 s (609 bytes)
+hook 8 concurrent 0.221 s
+search 0.075 s
+consolidate dry 0.154 s: 0 of 10000 live memories would close; `ljos consolidate --apply` closes them
+scale exit 0
+ONE-DONE
