@@ -206,6 +206,14 @@ result = "10000 live memories: hook on one prompt 0.066 to 0.147 s, eight prompt
 note = "the earlier run (11821) read a dry consolidation past the client's 30 s timeout from 5000 atoms; the bucketed consolidation (first three head words and carried entities, buckets of sixty-four) brings it to a tenth of a second at ten thousand. The hook's budget is a prompt, so a tenth of a second at ten thousand memories is the number the seat protocol paper quotes. A first rerun (15496) wrote lessons from a small vocabulary and the pack's overlap rule closed most of them on arrival, which is the rule working; the script now writes pseudo-word lessons that share no tokens"
 regenerate = "sbatch scripts/terra/hook-scale.sbatch in the ljos repository; the log is results/hook-scale-15510.txt"
 
+[results.forgetting]
+files = ["results/forgetting-15631.json"]
+logs = ["results/forgetting-15631.txt"]
+job = "packset scripts/terra/forgetting.sbatch: crates/packset-daemon/examples/forgetting.rs, a synthetic longitudinal corpus of 300 topics, one kept claim recalled on its review clock across 180 days and three paraphrases written late and never reviewed, asked on day 180"
+result = "kept claim first / mean rank: lexical only 0.230 / 2.49; 14-day age decay 0.270 / 3.74; FSRS retrievability 0.947 / 1.05; LRU (newest hit first) 0.000 / 8.26; keep-testing (the recall path's due-first order) 0.000 / 10.00"
+note = "the review-clock question packset-didl asked, answered on the Rust recall path. Retrievability is the slot that keeps a recalled claim over its unreviewed paraphrases; recency (LRU) inverts it. The recall path's due-first order fills the whole budget with due claims from other topics once the pack holds many, so it returns nothing about the cue; a bound on the due share of the budget follows from this row"
+regenerate = "sbatch scripts/terra/forgetting.sbatch in the packset repository; FORGETTING_JSON writes the JSON"
+
 [landscape]
 crate = "leidarljos/landscape (private while rgsaddle is): Gaussian wells over the embeddings, cores by L-BFGS descent (rgmin), saddles by minimum-mode following (rgsaddle)"
 jobs = ["jobs/mab-survey.sbatch (cores and saddles per conflict-resolution record, kernel a third of the neighbour distance)", "jobs/saddle-conflicts.sbatch and jobs/saddle-conflicts2.sbatch (the point-scale saddles scored against the replacement rule)", "jobs/mab-gnn.sbatch (edge inference with a GraphSAGE link predictor; jobs/gnn-env.sbatch builds its environment)", "jobs/mab-dump-cr2.sbatch and jobs/mab-qa-cr2.sbatch (the saddle, network, object-chaining and live arms in one reading job)"]
