@@ -1,7 +1,7 @@
 #!/usr/bin/env -S uv run --script
 # /// script
 # requires-python = ">=3.10"
-# dependencies = []
+# dependencies = ["cyclopts>=3"]
 # ///
 """Recompute every table in this package from the raw files beside it.
 
@@ -11,18 +11,22 @@ Answer-accuracy tables come from the verdict files: one JSON line a
 question with the judge's yes or no. Nothing here calls a model; a reader
 who has only this directory can regenerate every number in the README.
 
-    python3 scripts/tables.py results/lme-dump-all.jsonl --gold answer_session_ids
-    python3 scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category
-    python3 scripts/tables.py --verdicts results/lme-qa-oracle-11663.jsonl
+    scripts/tables.py results/lme-dump-all.jsonl --gold answer_session_ids
+    scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category
+    scripts/tables.py --verdicts results/lme-qa-oracle-11663.jsonl
 
 Accuracy rows carry a 95% bootstrap interval, and two or more verdict
 files given together print the paired difference of each against the one
 before it, over the questions both answered, with its interval.
 """
-import argparse
 import collections
 import json
 import sys
+from pathlib import Path
+
+import cyclopts
+
+app = cyclopts.App(help=__doc__)
 
 CUTOFFS = (1, 5, 10)
 
@@ -83,7 +87,7 @@ def interval(values, seed=SEED):
     return (means[int(0.025 * BOOT)], means[int(0.975 * BOOT) - 1])
 
 
-def verdicts(path):
+def verdicts_of(path):
     rows = rows_of(path)
     by = collections.OrderedDict()
     for r in rows:
@@ -145,25 +149,40 @@ def paired(a_path, a_rows, b_path, b_rows):
         print(f"  {kind}: {sum(d) / len(d):+.3f} ({klo:+.3f} to {khi:+.3f}) over {len(d)}{mark}")
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("dump", nargs="?")
-    ap.add_argument("--gold", default="answer_session_ids")
-    ap.add_argument("--type", default="question_type")
-    ap.add_argument("--verdicts", action="append", default=[])
-    a = ap.parse_args()
-    if a.dump:
-        retrieval(rows_of(a.dump), a.gold, a.type)
+@app.default
+def main(
+    dump: Path | None = None,
+    *,
+    gold: str = "answer_session_ids",
+    type: str = "question_type",
+    verdicts: list[Path] = [],
+):
+    """Print the tables a dump and verdict files carry.
+
+    Parameters
+    ----------
+    dump
+        A retrieval dump, one JSON line a question with the ids each arm ranked.
+    gold
+        The field that holds the gold ids in the dump.
+    type
+        The field that groups questions into rows.
+    verdicts
+        Verdict files, each a JSON line a question with the judge's yes or no;
+        two or more print the paired difference of each against the one before.
+    """
+    if dump is not None:
+        retrieval(rows_of(dump), gold, type)
     previous = None
-    for v in a.verdicts:
-        rows = verdicts(v)
+    for v in verdicts:
+        rows = verdicts_of(v)
         if previous is not None:
             paired(previous[0], previous[1], v, rows)
         previous = (v, rows)
-    if not a.dump and not a.verdicts:
-        ap.print_help()
+    if dump is None and not verdicts:
+        print("nothing to print; give a dump or --verdicts", file=sys.stderr)
         sys.exit(2)
 
 
 if __name__ == "__main__":
-    main()
+    app()

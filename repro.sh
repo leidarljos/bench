@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Reproduce the package from nothing, on a Slurm node with one GPU.
 # Each step is one job script under jobs/; each checks its inputs by hash.
-# Tables never need a model: `python3 scripts/tables.py` regenerates them
+# Tables never need a model: `scripts/tables.py` regenerates them
 # from results/ alone, which is the reproduction most readers want.
 set -euo pipefail
 here="$(cd "$(dirname "$0")" && pwd)"
@@ -13,20 +13,20 @@ check() { # file expected-sha256
 case "${1:-tables}" in
   tables)
     cd "$here"
-    python3 scripts/tables.py results/lme-dump-all.jsonl
-    python3 scripts/tables.py results/lme-dump-all-window.jsonl
-    python3 scripts/tables.py results/lme-dump-island.jsonl
-    python3 scripts/tables.py results/lme-dump-100-rerank.jsonl
-    python3 scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category
-    python3 scripts/tables.py --verdicts results/lme-qa-oracle-11663.jsonl \
+    scripts/tables.py results/lme-dump-all.jsonl
+    scripts/tables.py results/lme-dump-all-window.jsonl
+    scripts/tables.py results/lme-dump-island.jsonl
+    scripts/tables.py results/lme-dump-100-rerank.jsonl
+    scripts/tables.py results/locomo-dump.jsonl --gold evidence --type category
+    scripts/tables.py --verdicts results/lme-qa-oracle-11663.jsonl \
       --verdicts results/lme-qa-sessions-fused-11663.jsonl --verdicts results/lme-qa-sessions-11663.jsonl
-    python3 scripts/tables.py --verdicts results/lme-qa-gaps-sessions-fused-top5-11753.jsonl
-    python3 scripts/tables.py --verdicts results/mab-qa-lexical-top10-11759.jsonl
-    python3 scripts/tables.py --verdicts results/locomo-learn-none-top10-11752.jsonl \
+    scripts/tables.py --verdicts results/lme-qa-gaps-sessions-fused-top5-11753.jsonl
+    scripts/tables.py --verdicts results/mab-qa-lexical-top10-11759.jsonl
+    scripts/tables.py --verdicts results/locomo-learn-none-top10-11752.jsonl \
       --verdicts results/locomo-learn-fsrs-top10-11752.jsonl --verdicts results/locomo-learn-oracle-top10-11752.jsonl
-    python3 scripts/tables.py --verdicts results/mab-qa-fused-live-top10-11750.jsonl \
+    scripts/tables.py --verdicts results/mab-qa-fused-live-top10-11750.jsonl \
       --verdicts results/mab-qa-fused-latest-top10-11750.jsonl
-    python3 scripts/tables.py --verdicts results/locomo-qa-oracle-top10-11672.jsonl \
+    scripts/tables.py --verdicts results/locomo-qa-oracle-top10-11672.jsonl \
       --verdicts results/locomo-qa-turns-fused-top20-11672.jsonl \
       --verdicts results/locomo-qa-turns-fused-top10-11672.jsonl --verdicts results/locomo-qa-turns-top10-11672.jsonl
     ;;
