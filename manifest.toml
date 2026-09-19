@@ -200,10 +200,11 @@ note = "a negative for the two geometric second hops on this benchmark: the obje
 regenerate = "the log, results/mab-qa-cr2-11793.txt"
 
 [results.hook_scale]
-logs = ["results/hook-scale-11821.txt"]
-job = "a scratch pack filled with 1000, 5000 and 10000 distinct lessons on the build host; the seat's hook, search and a dry consolidation timed with the shell's time keyword"
-result = "hook on one prompt: 0.016 s at 1000 atoms, 0.058 s at 5000, 0.093 to 0.195 s at 10000; eight concurrent hooks 0.056, 0.146, 0.247 s; search 0.012, 0.032, 0.078 s; a dry consolidation 2.7 s at 1000 atoms and past the client's 30 s timeout from 5000 (before the bucketed consolidation landed; the rerun is pending)"
-note = "the hook's budget is a prompt, so a tenth of a second at ten thousand memories is the number the seat protocol paper quotes; consolidation is a sitting, not a hook"
+logs = ["results/hook-scale-15510.txt", "results/hook-scale-11821.txt"]
+job = "ljos scripts/terra/hook-scale.sbatch with scripts/terra/hook_scale.py: a scratch pack filled with 1000, 5000 and 10000 token-distinct lessons on the build host (dense ballot on, bge-small); the seat's hook on one prompt three times, on eight prompts at once, search, and a dry consolidation, timed by the script"
+result = "10000 live memories: hook on one prompt 0.066 to 0.147 s, eight prompts at once 0.206 s, search 0.068 s, a dry consolidation 0.108 s; 5000: 0.038 to 0.089 s, 0.130 s, 0.044 s, 0.082 s; 1000: 0.015 to 0.028 s, 0.060 s, 0.016 s, 0.012 s"
+note = "the earlier run (11821) read a dry consolidation past the client's 30 s timeout from 5000 atoms; the bucketed consolidation (first three head words and carried entities, buckets of sixty-four) brings it to a tenth of a second at ten thousand. The hook's budget is a prompt, so a tenth of a second at ten thousand memories is the number the seat protocol paper quotes. A first rerun (15496) wrote lessons from a small vocabulary and the pack's overlap rule closed most of them on arrival, which is the rule working; the script now writes pseudo-word lessons that share no tokens"
+regenerate = "sbatch scripts/terra/hook-scale.sbatch in the ljos repository; the log is results/hook-scale-15510.txt"
 
 [landscape]
 crate = "leidarljos/landscape (private while rgsaddle is): Gaussian wells over the embeddings, cores by L-BFGS descent (rgmin), saddles by minimum-mode following (rgsaddle)"

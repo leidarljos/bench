@@ -79,9 +79,10 @@ Three levels, in the sense of the ACM artifact badges.
   landscape's lowest passes (0.492), a link predictor's inferred edges
   (0.490), none (0.530). =results/mab-qa-cr2-11793.txt=; the two
   geometric hops are a measured negative.
-- The seat's hook timed on a scratch pack of 1000, 5000 and 10000 lessons:
-  a tenth of a second on one prompt at ten thousand memories, a quarter
-  with eight prompts at once. =results/hook-scale-11821.txt=.
+- The seat's hook timed on a scratch pack of 1000, 5000 and 10000 live
+  lessons: 0.07 to 0.15 s on one prompt at ten thousand memories, 0.21 s
+  with eight prompts at once, a dry consolidation 0.11 s.
+  =results/hook-scale-15510.txt=.
 
 * What the numbers are not
 
