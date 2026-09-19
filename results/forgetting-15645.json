@@ -1,0 +1,33 @@
+{
+  "topics": 300,
+  "paraphrases": 3,
+  "days": 180,
+  "asked_on": "2026-06-30T00:00:00.000Z",
+  "orderings": [
+    {
+      "ordering": "off (lexical only)",
+      "kept_first": 0.23,
+      "mean_rank": 2.493333333333333
+    },
+    {
+      "ordering": "on (14-day half-life on age)",
+      "kept_first": 0.27,
+      "mean_rank": 3.736666666666667
+    },
+    {
+      "ordering": "fsrs (retrievability)",
+      "kept_first": 0.9466666666666667,
+      "mean_rank": 1.0533333333333332
+    },
+    {
+      "ordering": "lru (newest hit first)",
+      "kept_first": 0.0,
+      "mean_rank": 8.263333333333334
+    },
+    {
+      "ordering": "keep-testing (recall: due first)",
+      "kept_first": 0.0,
+      "mean_rank": 9.996666666666666
+    }
+  ]
+}

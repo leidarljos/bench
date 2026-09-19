@@ -1,0 +1,11 @@
+4d8713c fix(recall): within a tier, retrievability before recency; the
+300 topics, one kept claim written in the first 30 days and recalled on its clock, 3 paraphrases written after day 150 and never reviewed; asked on day 180
+
+| ordering | kept claim first | mean rank of the kept claim |
+|---|---|---|
+| off (lexical only) | 0.230 | 2.49 |
+| on (14-day half-life on age) | 0.270 | 3.74 |
+| fsrs (retrievability) | 0.947 | 1.05 |
+| lru (newest hit first) | 0.000 | 8.26 |
+| keep-testing (recall: due first) | 0.000 | 10.00 |
+FORGETTING-DONE
