@@ -85,9 +85,11 @@ Three levels, in the sense of the ACM artifact badges.
   due-first order returns nothing about the cue once the pack holds many
   due claims. =results/forgetting-15631.json=.
 - The seat's hook timed on a scratch pack of 1000, 5000 and 10000 live
-  lessons: 0.07 to 0.15 s on one prompt at ten thousand memories, 0.21 s
-  with eight prompts at once, a dry consolidation 0.11 s.
-  =results/hook-scale-15510.txt=.
+  lessons: 0.07 to 0.12 s on one prompt at ten thousand memories, 0.27 s
+  with eight prompts at once, a dry consolidation 0.16 s; the fill of
+  10000 lessons takes 127 s where it took 1224 s, the write trace
+  beside it naming the stage each fix removed.
+  =results/hook-scale-15900.txt=, =results/hook-scale-writes-15900.txt=.
 
 * What the numbers are not
 
