@@ -1,0 +1,39 @@
+home exists: memory.lmdb packsetd.lock 
+=== 1000 atoms
+atoms 1000 live 999
+hook single 0.025 s
+hook single 0.016 s
+hook single 0.016 s
+hook bytes: 773
+hook eight concurrent 0.056 s
+search 0.012 s
+consolidate dry 2.676 s
+=== 5000 atoms
+atoms 5000 live 4963
+hook single 0.113 s
+hook single 0.058 s
+hook single 0.058 s
+hook bytes: 435
+hook eight concurrent 0.146 s
+search 0.032 s
+Error: consolidate: POST /v1/consolidate failed
+    0: http: http://127.0.0.1:8793/v1/consolidate: Network Error: Network Error: Error encountered in the status line: timed out reading response
+    1: http://127.0.0.1:8793/v1/consolidate: Network Error: Network Error: Error encountered in the status line: timed out reading response
+    2: Network Error: Error encountered in the status line: timed out reading response
+consolidate dry 30.141 s
+=== 10000 atoms
+atoms 10000 live 9907
+hook single 0.195 s
+hook single 0.108 s
+hook single 0.093 s
+hook bytes: 771
+hook eight concurrent 0.247 s
+search 0.078 s
+Error: consolidate: POST /v1/consolidate failed
+    0: http: http://127.0.0.1:8793/v1/consolidate: Network Error: Network Error: Error encountered in the status line: timed out reading response
+    1: http://127.0.0.1:8793/v1/consolidate: Network Error: Network Error: Error encountered in the status line: timed out reading response
+    2: Network Error: Error encountered in the status line: timed out reading response
+consolidate dry 30.484 s
+encoder: 
+
+[process exited while detached; exit code unknown]

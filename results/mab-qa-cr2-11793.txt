@@ -1,0 +1,50 @@
+| factconsolidation_mh_262k | 100 | 0.070 |
+| factconsolidation_mh_32k | 100 | 0.090 |
+| factconsolidation_mh_64k | 100 | 0.100 |
+| factconsolidation_mh_6k | 100 | 0.210 |
+| factconsolidation_sh_262k | 100 | 0.860 |
+| factconsolidation_sh_32k | 100 | 0.870 |
+| factconsolidation_sh_64k | 100 | 0.890 |
+| factconsolidation_sh_6k | 100 | 0.850 |
+| all | 800 | 0.492 |
+=== arm: fused live gnn top 10
+| factconsolidation_mh_262k | 100 | 0.060 |
+| factconsolidation_mh_32k | 100 | 0.110 |
+| factconsolidation_mh_64k | 100 | 0.120 |
+| factconsolidation_mh_6k | 100 | 0.190 |
+| factconsolidation_sh_262k | 100 | 0.870 |
+| factconsolidation_sh_32k | 100 | 0.880 |
+| factconsolidation_sh_64k | 100 | 0.850 |
+| factconsolidation_sh_6k | 100 | 0.840 |
+| all | 800 | 0.490 |
+=== arm: fused live hop2 top 10
+| factconsolidation_mh_262k | 100 | 0.240 |
+| factconsolidation_mh_32k | 100 | 0.290 |
+| factconsolidation_mh_64k | 100 | 0.260 |
+| factconsolidation_mh_6k | 100 | 0.410 |
+| factconsolidation_sh_262k | 100 | 0.870 |
+| factconsolidation_sh_32k | 100 | 0.860 |
+| factconsolidation_sh_64k | 100 | 0.870 |
+| factconsolidation_sh_6k | 100 | 0.830 |
+| all | 800 | 0.579 |
+=== arm: fused live top 10
+| factconsolidation_mh_262k | 100 | 0.060 |
+| factconsolidation_mh_32k | 100 | 0.140 |
+| factconsolidation_mh_64k | 100 | 0.150 |
+| factconsolidation_mh_6k | 100 | 0.290 |
+| factconsolidation_sh_262k | 100 | 0.890 |
+| factconsolidation_sh_32k | 100 | 0.880 |
+| factconsolidation_sh_64k | 100 | 0.930 |
+| factconsolidation_sh_6k | 100 | 0.900 |
+| all | 800 | 0.530 |
+ONE-DONE
+| all | lexical | 800 | 0.225 | 0.537 | 0.581 |
+| all | dense | 800 | 0.263 | 0.568 | 0.625 |
+| all | fused | 800 | 0.266 | 0.568 | 0.609 |
+| all | fused latest | 800 | 0.160 | 0.455 | 0.609 |
+| all | fused live | 800 | 0.120 | 0.398 | 0.615 |
+| all | fused live hop2 | 800 | 0.477 | 0.557 | 0.739 |
+| all | fused live saddle | 800 | 0.477 | 0.557 | 0.576 |
+| all | fused live gnn | 800 | 0.477 | 0.557 | 0.585 |
+
+[process exited while detached; exit code unknown]

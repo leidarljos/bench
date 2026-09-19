@@ -188,6 +188,23 @@ result = "hop2 0.576 against live 0.535 over 800 (+0.041, interval +0.014 to +0.
 note = "both verdict files are held out of the package: a person's name in one reader answer trips the commit guard; the log carries their tables and the paired difference is in the notes. The same live arm read 0.480 in job 11750 and 0.535 here at temperature zero, so paired differences within one job are the comparison, not raw numbers across jobs"
 regenerate = "the log, results/mab-qa-cr-11764.txt"
 
+[results.mab_cr_arms]
+files = []
+logs = ["results/mab-qa-cr2-11793.txt"]
+jobs = ["jobs/mab-survey.sbatch", "jobs/mab-gnn.sbatch", "jobs/mab-dump-cr2.sbatch", "jobs/mab-qa-cr2.sbatch"]
+questions = 800
+top = 10
+arms = "fused live, fused live hop2 (objects of the strongest live facts), fused live saddle (the landscape's lowest passes from the strongest live facts as the second hop), fused live gnn (the GraphSAGE link predictor's inferred edges as the second hop)"
+result = "reading accuracy over 800: hop2 0.579, live 0.530, saddle 0.492, gnn 0.490; single-hop rows 0.83 to 0.93 on every arm, multi-hop rows hop2 0.24 to 0.41 against live 0.06 to 0.29, saddle 0.07 to 0.21, gnn 0.06 to 0.19. Retrieval hit at ten over the same 800: hop2 0.739, live 0.615, gnn 0.585, saddle 0.576, fused 0.609"
+note = "a negative for the two geometric second hops on this benchmark: the object of a fact names the fact that answers a multi-hop question and neither a pass in embedding space nor an inferred edge does. The saddle and network arms rank below the live arm on retrieval, so the reading loss is a retrieval loss. Verdict files held out of the package for the same reason as mab_cr_hop2"
+regenerate = "the log, results/mab-qa-cr2-11793.txt"
+
+[results.hook_scale]
+logs = ["results/hook-scale-11821.txt"]
+job = "a scratch pack filled with 1000, 5000 and 10000 distinct lessons on the build host; the seat's hook, search and a dry consolidation timed with the shell's time keyword"
+result = "hook on one prompt: 0.016 s at 1000 atoms, 0.058 s at 5000, 0.093 to 0.195 s at 10000; eight concurrent hooks 0.056, 0.146, 0.247 s; search 0.012, 0.032, 0.078 s; a dry consolidation 2.7 s at 1000 atoms and past the client's 30 s timeout from 5000 (before the bucketed consolidation landed; the rerun is pending)"
+note = "the hook's budget is a prompt, so a tenth of a second at ten thousand memories is the number the seat protocol paper quotes; consolidation is a sitting, not a hook"
+
 [landscape]
 crate = "leidarljos/landscape (private while rgsaddle is): Gaussian wells over the embeddings, cores by L-BFGS descent (rgmin), saddles by minimum-mode following (rgsaddle)"
 jobs = ["jobs/mab-survey.sbatch (cores and saddles per conflict-resolution record, kernel a third of the neighbour distance)", "jobs/saddle-conflicts.sbatch and jobs/saddle-conflicts2.sbatch (the point-scale saddles scored against the replacement rule)", "jobs/mab-gnn.sbatch (edge inference with a GraphSAGE link predictor; jobs/gnn-env.sbatch builds its environment)", "jobs/mab-dump-cr2.sbatch and jobs/mab-qa-cr2.sbatch (the saddle, network, object-chaining and live arms in one reading job)"]

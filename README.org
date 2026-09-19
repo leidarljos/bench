@@ -74,6 +74,14 @@ Three levels, in the sense of the ACM artifact badges.
   top-ten arm and the LoCoMo run are added when they land.
 - LoCoMo, 1986 questions, turn granularity, evidence hit: lexical and
   fused. =results/locomo-dump.jsonl=.
+- MemoryAgentBench conflict resolution, 800 questions, the second hop
+  four ways: the objects of the strongest live facts (0.579), the
+  landscape's lowest passes (0.492), a link predictor's inferred edges
+  (0.490), none (0.530). =results/mab-qa-cr2-11793.txt=; the two
+  geometric hops are a measured negative.
+- The seat's hook timed on a scratch pack of 1000, 5000 and 10000 lessons:
+  a tenth of a second on one prompt at ten thousand memories, a quarter
+  with eight prompts at once. =results/hook-scale-11821.txt=.
 
 * What the numbers are not
 
