@@ -1,0 +1,36 @@
+packset: listening on 127.0.0.1:8798
+PACKSET_URL=http://127.0.0.1:8798
+INSIDE_MEMORY_URL=http://127.0.0.1:8798
+    Finished `release` profile [optimized] target(s) in 5.26s
+=== 1 clients x 200 ops
+1 clients x 200 ops: 600 requests in 9.89s, 61 req/s, 0 errors
+remember  p50  17.9ms  p95  24.1ms  p99 142.9ms  max 706.9ms
+search    p50  12.8ms  p95  18.7ms  p99  20.8ms  max  26.5ms
+=== 4 clients x 200 ops
+4 clients x 200 ops: 2400 requests in 20.89s, 115 req/s, 0 errors
+remember  p50  44.7ms  p95  67.1ms  p99  79.3ms  max 130.7ms
+search    p50  28.4ms  p95  46.6ms  p99  55.6ms  max  70.2ms
+=== 16 clients x 200 ops
+16 clients x 200 ops: 9600 requests in 86.18s, 111 req/s, 0 errors
+remember  p50 163.2ms  p95 221.0ms  p99 273.0ms  max 732.3ms
+search    p50 133.9ms  p95 181.3ms  p99 204.4ms  max 451.0ms
+=== 32 clients x 200 ops
+32 clients x 200 ops: 19200 requests in 131.55s, 146 req/s, 0 errors
+remember  p50 220.6ms  p95 392.4ms  p99 608.2ms  max    3.4s
+search    p50 185.6ms  p95 327.1ms  p99 460.0ms  max    3.3s
+=== 4 clients x 200 ops
+4 clients x 200 ops: 2400 requests in 15.55s, 154 req/s, 0 errors
+remember  p50  47.8ms  p95  57.4ms  p99  62.7ms  max 107.5ms
+search    p50  14.3ms  p95  24.5ms  p99  27.0ms  max  30.6ms
+shared workspace: 799 live + 1 closed of 800 written
+=== 16 clients x 200 ops
+16 clients x 200 ops: 9600 requests in 105.97s, 91 req/s, 0 errors
+remember  p50 187.4ms  p95 356.0ms  p99 481.6ms  max    1.1s
+search    p50 141.1ms  p95 266.9ms  p99 333.9ms  max 967.8ms
+shared workspace: 3192 live + 8 closed of 3200 written
+=== 32 clients x 200 ops
+32 clients x 200 ops: 19200 requests in 292.56s, 66 req/s, 0 errors
+remember  p50 532.8ms  p95 790.1ms  p99 907.3ms  max    1.7s
+search    p50 467.4ms  p95 704.2ms  p99 807.8ms  max    1.6s
+shared workspace: 6382 live + 18 closed of 6400 written
+HAMMER-DONE
